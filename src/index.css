@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Teko-Regular;
+  src: url('./fonts/Teko-Regular.ttf');
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: Teko-Regular, 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+svg {
+  height: 100%;
+  width: 100%;
+}

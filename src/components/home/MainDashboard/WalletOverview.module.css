@@ -1,0 +1,80 @@
+.container {
+  border-right: 1px solid rgb(197, 197, 197);
+  width: 72.5%;
+  padding: 1.5rem;
+}
+
+.walletContainer {
+  height: 40%;
+}
+
+.greetingContainer {
+  height: 20%;
+}
+
+.greeting {
+  display: flex;
+  height: 100%;
+}
+
+.greeting div {
+  height: 100%;
+  width: 3.5rem;
+  margin: 0 0.5rem;
+}
+
+.greeting div img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.greeting strong {
+  position: relative;
+  top: 0.5rem;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.overview {
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.wallet_detail {
+  width: 50%;
+}
+
+.wallet_detail_icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0 1rem;
+  border-radius: 0.6rem;
+  background-color: rgb(151, 202, 151);
+  display: inline-block;
+  position: relative;
+}
+
+.wallet_detail_icon div {
+  height: 40%;
+  width: 40%;
+  position: relative;
+  left: 0.7rem;
+  top: 0.7rem;
+}
+
+.wallet_detail_item {
+  display: inline-block;
+  position: relative;
+  top: 1.1rem;
+}
+
+.wallet_detail_item h1 {
+  font-size: 1.5rem;
+}
+
+.detail_item_heading {
+  color: rgb(160, 160, 160);
+}
