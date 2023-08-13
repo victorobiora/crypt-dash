@@ -16,13 +16,30 @@ const WalletOverview = (props) => {
         </div>
       </div>
       <section className={styles.overview}>
-        <WalletDetail svg={svgObject.chartUp} />
-        <WalletDetail svg={svgObject.shop} />
-        <div className={styles.card_image}>
-          <img />
-        </div>
-        <WalletDetail svg={svgObject.chartDown} />
-        <WalletDetail svg={svgObject.spending} />
+        <WalletDetail
+          svg={svgObject.chartUp}
+          bColor="rgb(151, 202, 151)"
+          text="Total Earnings"
+          amount="12,098.43"
+        />
+        <WalletDetail
+          svg={svgObject.shop}
+          bColor="rgb(197, 197, 197)"
+          text="Goal for the Month"
+          amount="15,000.00"
+        />
+        <WalletDetail
+          svg={svgObject.chartDown}
+          bColor="rgb(241, 170, 130)"
+          text="Total Spendings"
+          amount="10,600.88"
+        />
+        <WalletDetail
+          svg={svgObject.spending}
+          bColor="rgb(176, 176, 255)"
+          text="Spending Goals"
+          amount="12,500.55"
+        />
       </section>
     </section>
   );
