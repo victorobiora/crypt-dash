@@ -1,0 +1,21 @@
+.summaryContainer {
+    width: 100%;
+}
+
+
+.summaryHeadings {
+    display: flex;
+    border: 1px solid  rgb(197, 197, 197);
+    border-left: none;
+    border-right: none;
+    padding: 0.5rem 0;
+}
+
+.summaryHeadings div {
+    margin: 0 2rem;
+    color: rgb(113, 109, 109);;
+}
+
+.summaryHeadings div:first-child {
+    color: black;
+}
