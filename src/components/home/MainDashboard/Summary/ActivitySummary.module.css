@@ -4,7 +4,18 @@
     height: 100%;
 }
 
-.summary_activity div {
-    border: 2px solid green;
+.summary_activity > div {
+    padding-top: 1rem;
     width: 100%;
+}
+
+.activity_line_chart {
+    border-right: 0.5px solid rgb(197, 197, 197);
+}
+
+.activity_heading {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+
 }
