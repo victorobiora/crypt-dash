@@ -1,3 +1,4 @@
+import ActivitySummary from './ActivitySummary';
 import classes from './SummaryComponent.module.css'
 
 const SummaryComponent = props => {
@@ -7,6 +8,7 @@ const SummaryComponent = props => {
             <div><h1>SPENDING SUMMARY</h1></div>
             <div><h1>INCOME SUMMARY</h1></div>
         </div>
+        <ActivitySummary/>
         
     </section>
 };
