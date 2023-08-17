@@ -10,7 +10,7 @@
 
 .activity_line_chart {
   border-right: 0.5px solid rgb(197, 197, 197);
-  width: 30%;
+  width: 35%;
 }
 
 .activity_heading1 {
@@ -22,8 +22,15 @@
 .activity_history {
   padding-left: 1rem;
   display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.activity_history_head {
+  width: 100%;
   justify-content: space-between;
-  width: 60%;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 .history_heading1 {
@@ -53,4 +60,25 @@
   margin-left: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.activity_item {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.activity_item > * {
+ margin-right: 1rem;
+}
+
+.activity_item_icon {
+  position: relative;
+  top: 0.4rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.activity_item_description p {
+  color: rgb(104, 102, 102) ;
 }
