@@ -6,22 +6,40 @@ const ActivitySummary = (props) => {
   const activitiesArray = [
     {
       name: "Transfer In",
-      date: "May 12, 2022  12:34",
-      item: "Salary",
-      amount: 3054,
+      date: "May 1, 2022  12:34",
+      detail: "Salary",
+      amount: 3054.55,
+    },
+    {
+      name: "Transfer Out",
+      date: "May 8, 2022  18:23",
+      detail: "Dishwasher",
+      amount: 359.99,
+    },
+    {
+      name: "Transfer Out",
+      date: "May 12, 2022  17:58",
+      detail: "Car Fix",
+      amount: 1499.99
+    },
+    {
+      name: "Transfer In",
+      date: "May 19, 2022  07:00",
+      detail: "Web Dev Job",
+      amount: 4559.99
+    },
+    {
+      name: "Transfer Out",
+      date: "May 21, 2022  22:12",
+      detail: "Playstation Bought",
+      amount: 999.99
     },
     {
       name: "Transfer Out",
       date: "May 12, 2022  12:34",
-      item: "dishwasher",
-      amount: 360,
-    },
-    {
-      name: " Transfer Out",
-      date: "May 12, 2022  12:34",
-      item: "Car Fix",
-      amount: 1500,
-    },
+      detail: "Car Fix",
+      amount: 1499.99
+    }
   ];
 
   return (
@@ -52,10 +70,16 @@ const ActivitySummary = (props) => {
               <h3>{item.name}</h3>
               <p>{item.date}</p>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li className={classes.activity_item_icon}>
+              {item.name === "Transfer Out"
+                ? svgObject.redIcon
+                : svgObject.greenIcon}
+            </li>
+            <li className={classes.activity_detail}>{item.detail}</li>
+            <li className={classes.activity_item_icon}>{svgObject.coins}</li>
+            <li className={classes.activity_item_amount}>
+              <strong>$</strong>  {item.amount}
+            </li>
           </ul>
         ))}
       </div>

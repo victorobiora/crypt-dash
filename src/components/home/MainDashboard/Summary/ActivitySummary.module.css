@@ -79,6 +79,29 @@
   width: 1rem;
 }
 
+.activity_item_description {
+  width: 30%;
+}
+
 .activity_item_description p {
   color: rgb(104, 102, 102) ;
+}
+
+.activity_detail, .activity_item_amount {
+margin-left: 0.6rem;
+font-style: italic;
+position: relative;
+top: 0.2rem;
+width: 30%;
+font-size: 1.1rem;
+}
+
+.activity_item_amount{
+  margin-left: 0.2rem;
+  width: 15%;
+}
+
+.activity_item_amount strong {
+  font-size: 1.2rem;
+  margin-right: 0.2rem;
 }

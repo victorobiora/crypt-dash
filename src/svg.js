@@ -140,11 +140,7 @@ const spendingSvg = (
 );
 
 const shoppingSvg = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
     <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
     <g
@@ -164,6 +160,59 @@ const shoppingSvg = (
   </svg>
 );
 
+const redIconSvg = (
+  <svg viewBox="0 0 128 128" aria-hidden="true" role="img">
+    <circle cx="63.93" cy="64" r="60" fill="#c33" />
+    <circle cx="60.03" cy="63.1" r="56.1" fill="#f44336" />
+    <path
+      d="M23.93 29.7c4.5-7.1 14.1-13 24.1-14.8c2.5-.4 5-.6 7.1.2c1.6.6 2.9 2.1 2 3.8c-.7 1.4-2.6 2-4.1 2.5a44.64 44.64 0 0 0-23 17.4c-2 3-5 11.3-8.7 9.2c-3.9-2.3-3.1-9.5 2.6-18.3z"
+      fill="#ff8a80"
+    />
+  </svg>
+);
+
+const greenIconSvg = (
+  <svg viewBox="0 0 128 128" aria-hidden="true" role="img" fill="#000000">
+    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <g id="SVGRepo_iconCarrier">
+      <circle cx="63.93" cy="64" r="60" fill="#2d421a" />
+      <circle cx="60.03" cy="63.1" r="56.1" fill="#2c4314" />
+      <path
+        d="M23.93 29.7c4.5-7.1 14.1-13 24.1-14.8c2.5-.4 5-.6 7.1.2c1.6.6 2.9 2.1 2 3.8c-.7 1.4-2.6 2-4.1 2.5a44.64 44.64 0 0 0-23 17.4c-2 3-5 11.3-8.7 9.2c-3.9-2.3-3.1-9.5 2.6-18.3z"
+        fill="#aed581"
+      />
+    </g>
+  </svg>
+);
+
+const coinsSvg = (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <g id="SVGRepo_iconCarrier">
+      <path
+        d="M14 10.5C14 11.8807 11.7614 13 9 13C6.23858 13 4 11.8807 4 10.5M14 10.5C14 9.11929 11.7614 8 9 8C6.23858 8 4 9.11929 4 10.5M14 10.5V14.5M4 10.5V14.5M20 5.5C20 4.11929 17.7614 3 15 3C13.0209 3 11.3104 3.57493 10.5 4.40897M20 5.5C20 6.42535 18.9945 7.23328 17.5 7.66554M20 5.5V14C20 14.7403 18.9945 15.3866 17.5 15.7324M20 10C20 10.7567 18.9495 11.4152 17.3999 11.755M14 14.5C14 15.8807 11.7614 17 9 17C6.23858 17 4 15.8807 4 14.5M14 14.5V18.5C14 19.8807 11.7614 21 9 21C6.23858 21 4 19.8807 4 18.5V14.5"
+        stroke="#312b2b"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+  </svg>
+);
+
 export const svgObject = {
   homeIcon: homeIconSvg,
   homeLink: homeLinkSvg,
@@ -173,5 +222,8 @@ export const svgObject = {
   chartUp: chartUpSvg,
   chartDown: chartDownSvg,
   spending: spendingSvg,
-  shop : shoppingSvg
+  shop: shoppingSvg,
+  redIcon: redIconSvg,
+  greenIcon: greenIconSvg,
+  coins: coinsSvg
 };
