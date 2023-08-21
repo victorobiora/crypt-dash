@@ -8,8 +8,8 @@ const PortfolioComponent = props => {
     <p>Increase your profit</p>
   </div>
   <div className={classes.portfolio_display}>
-    <h4>My  Portfolio</h4>
-    <h2>$23,050.00</h2>
+    <h4>My Portfolio</h4>
+    <h2>$23,578.00</h2>
     <div className={classes.portfolio_buttons}>
         <button>
             <div>
