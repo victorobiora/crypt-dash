@@ -191,10 +191,7 @@ const greenIconSvg = (
 );
 
 const coinsSvg = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-  >
+  <svg viewBox="0 0 24 24" fill="none">
     <g id="SVGRepo_bgCarrier" stroke-width="0" />
     <g
       id="SVGRepo_tracerCarrier"
@@ -213,6 +210,31 @@ const coinsSvg = (
   </svg>
 );
 
+const depositSvg = (
+  <svg viewBox="0 0 24 24">
+    <path d="M19.6 21H4.4C3.1 21 2 19.9 2 18.6V14h2v4.2c0 .6.4.8 1 .8h14c.6 0 1-.4 1-1v-4h2v4.6c0 1.3-1.1 2.4-2.4 2.4z" />
+    <path d="M15.3 12.1L13.4 14v-4c0-2 0-4.9 2.4-7-3.4.6-5.1 3.2-5.2 7v4l-1.9-1.9L7 13l5 5 5-5-1.7-.9z" />
+  </svg>
+);
+
+const withdrawSvg = (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M12 9C11.4477 9 11 9.44771 11 10V15.5856L9.70711 14.2928C9.3166 13.9024 8.68343 13.9024 8.29292 14.2928C7.90236 14.6834 7.90236 15.3165 8.29292 15.7071L11.292 18.7063C11.6823 19.0965 12.3149 19.0968 12.7055 18.707L15.705 15.7137C16.0955 15.3233 16.0955 14.69 15.705 14.2996C15.3145 13.909 14.6814 13.909 14.2908 14.2996L13 15.5903V10C13 9.44771 12.5523 9 12 9Z"
+      fill="#0F0F0F"
+    />
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M21 1C22.6569 1 24 2.34315 24 4V8C24 9.65685 22.6569 11 21 11H19V20C19 21.6569 17.6569 23 16 23H8C6.34315 23 5 21.6569 5 20V11H3C1.34315 11 0 9.65685 0 8V4C0 2.34315 1.34315 1 3 1H21ZM22 8C22 8.55228 21.5523 9 21 9H19V7H20C20.5523 7 21 6.55229 21 6C21 5.44772 20.5523 5 20 5H4C3.44772 5 3 5.44772 3 6C3 6.55229 3.44772 7 4 7H5V9H3C2.44772 9 2 8.55228 2 8V4C2 3.44772 2.44772 3 3 3H21C21.5523 3 22 3.44772 22 4V8ZM7 7V20C7 20.5523 7.44772 21 8 21H16C16.5523 21 17 20.5523 17 20V7H7Z"
+      fill="#0F0F0F"
+    />
+  </svg>
+);
+
 export const svgObject = {
   homeIcon: homeIconSvg,
   homeLink: homeLinkSvg,
@@ -225,5 +247,7 @@ export const svgObject = {
   shop: shoppingSvg,
   redIcon: redIconSvg,
   greenIcon: greenIconSvg,
-  coins: coinsSvg
+  coins: coinsSvg,
+  deposit: depositSvg,
+  withdraw: withdrawSvg
 };
