@@ -47,7 +47,7 @@ const LiveChartsComponent = (props) => {
               </div>
             </div>
             <div className={classes.live_item_chart}></div>
-            <div className={classes.live_item_price}></div>
+            <div className={classes.live_item_price}><h4>${item.price}</h4></div>
           </li>
         ))}
       </ul>
