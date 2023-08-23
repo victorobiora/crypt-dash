@@ -31,12 +31,12 @@ const LiveChartsComponent = (props) => {
   return (
     <section className={classes.container}>
       <div className={classes.liveCharts_heading}>
-        <h4>Live Charts</h4>
+        <h4> Live Charts </h4>
         <Link href="/">See all</Link>
       </div>
       <ul className={classes.liveCharts_container}>
         {liveArray.map((item) => (
-          <li className={classes.live_item}>
+          <li className={classes.live_item} key={item.shortName}>
             <div className={classes.live_item_name}>
               <div className={classes.live_item_picture}>
                 <img src={item.picture} alt={item.shortName} />

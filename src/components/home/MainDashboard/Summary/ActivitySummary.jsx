@@ -64,7 +64,7 @@ const ActivitySummary = (props) => {
           </div>
         </div>
         {activitiesArray.map((item) => (
-          <ul className={classes.activity_item}>
+          <ul className={classes.activity_item} key={Math.random() * 10000}>
             <li className={classes.activity_item_icon}>{svgObject.shop}</li>
             <li className={classes.activity_item_description}>
               <h3>{item.name}</h3>

@@ -21,18 +21,24 @@
   
   .live_item {
     margin: 0.4rem;
+    padding-left: 0.5rem;
   }
 
   .live_item, .live_item_name {
     display: flex;
   }
 
+  .live_item h5{
+    color: rgb(130, 127, 127);
+  }
+  
   .live_item_picture {
     height: 1.5rem;
     width: 1.5rem;
     border-radius: 50%;
     margin-right: 0.5rem;
   }
+
 
 .live_item_picture img {
     height: 100%;

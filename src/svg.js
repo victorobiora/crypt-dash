@@ -173,11 +173,11 @@ const redIconSvg = (
 
 const greenIconSvg = (
   <svg viewBox="0 0 128 128" aria-hidden="true" role="img" fill="#000000">
-    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+    <g id="SVGRepo_bgCarrier" strokeWidth="0" />
     <g
       id="SVGRepo_tracerCarrier"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <g id="SVGRepo_iconCarrier">
       <circle cx="63.93" cy="64" r="60" fill="#2d421a" />
@@ -192,7 +192,7 @@ const greenIconSvg = (
 
 const coinsSvg = (
   <svg viewBox="0 0 24 24" fill="none">
-    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+    <g id="SVGRepo_bgCarrier" strokeWidth="0" />
     <g
       id="SVGRepo_tracerCarrier"
       strokeLinecap="round"
