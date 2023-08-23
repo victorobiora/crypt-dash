@@ -40,7 +40,7 @@ const FavoritesComponent = (props) => {
               </div>
             </div>
 
-            <div className={classes.favorites_item_chart}></div>
+            <div className={classes.favorites_item_chart}>jvd</div>
             <div>
               <h3 className={classes.price}>${item.price}</h3>
               <h4 className={classes.percentageDiff}>{item.percentageDiff}%</h4>

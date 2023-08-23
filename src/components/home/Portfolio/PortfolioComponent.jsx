@@ -1,6 +1,7 @@
 import classes from "./PortfolioComponent.module.css";
 import FavoritesComponent from "./FavoritesComponent";
 import { svgObject } from "../../../svg";
+import LiveChartsComponent from "./LiveChartsComponent";
 
 const PortfolioComponent = (props) => {
   return (
@@ -24,6 +25,7 @@ const PortfolioComponent = (props) => {
         </div>
       </div>
       <FavoritesComponent/>
+      <LiveChartsComponent/>
     </section>
   );
 };

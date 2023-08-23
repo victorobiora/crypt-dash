@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .favorites_container {
@@ -13,6 +13,10 @@
 .favorites_heading {
   display: flex;
   justify-content: space-between;
+}
+
+.favorites_heading h4 {
+    color: rgb(8, 8, 173);
 }
 
 .favorites_item {
@@ -45,6 +49,10 @@
 .favorites_item_name h4,
 .percentageDiff {
   color: rgb(130, 127, 127);
+}
+
+.favorites_item_chart {
+   height: 6.5rem;
 }
 
 .favorites_item > div:last-child {
