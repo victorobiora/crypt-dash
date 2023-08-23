@@ -21,8 +21,8 @@ const FavoritesComponent = (props) => {
   ];
 
   return (
-    <section>
-      <div>
+    <section className={classes.container}>
+      <div className={classes.favorites_heading}>
         <h4>Favorites</h4>
         <Link href="/">See all</Link>
       </div>
@@ -30,7 +30,10 @@ const FavoritesComponent = (props) => {
         {favArray.map((item) => (
           <li className={classes.favorites_item}>
             <div>
-              <img alt={item.shortName} src={item.picture} />
+                <div className={classes.favorites_item_image}>
+                    <img alt={item.shortName} src={item.picture} /> 
+                </div>
+      
               <div className={classes.favorites_item_name}>
                 <h3>{item.shortName}</h3>
                 <h4>{item.name}</h4>
@@ -40,7 +43,7 @@ const FavoritesComponent = (props) => {
             <div className={classes.favorites_item_chart}></div>
             <div>
               <h3 className={classes.price}>${item.price}</h3>
-              <h4 className={classes.percentageDiff}>{item.percentageDiff}</h4>
+              <h4 className={classes.percentageDiff}>{item.percentageDiff}%</h4>
             </div>
           </li>
         ))}

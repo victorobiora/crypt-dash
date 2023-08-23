@@ -1,4 +1,5 @@
 import classes from "./PortfolioComponent.module.css";
+import FavoritesComponent from "./FavoritesComponent";
 import { svgObject } from "../../../svg";
 
 const PortfolioComponent = (props) => {
@@ -22,6 +23,7 @@ const PortfolioComponent = (props) => {
           </button>
         </div>
       </div>
+      <FavoritesComponent/>
     </section>
   );
 };
