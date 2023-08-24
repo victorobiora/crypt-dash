@@ -5,10 +5,10 @@ import styles from "./WalletOverview.module.css";
 
 const MainDashboard = (props) => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <WalletOverview />
       <SummaryComponent/>
-    </div>
+    </section>
   );
 };
 

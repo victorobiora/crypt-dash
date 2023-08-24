@@ -1,8 +1,7 @@
-
+import LoginComponent from "../components/Login/LoginComponent";
 
 const LogInPage = () => {
-  return <div>jcudij</div>
-}
-
+  return <LoginComponent />;
+};
 
 export default LogInPage;
