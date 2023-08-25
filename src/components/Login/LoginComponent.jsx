@@ -12,7 +12,7 @@ const LoginComponent = (props) => {
         </h4>
       </div>
       <form>
-        {<QuestionsComponents.GetFavCoins />}
+        {<QuestionsComponents.GetIncome />}
         <button>Next</button>
       </form>
     </section>

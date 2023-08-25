@@ -5,7 +5,7 @@ export const GetName = (props) => {
   return (
     <div className={classes.getNameContainer}>
       <h2>What is your name?</h2>
-      <input type="text" name="name" className={classes.getNameInput} />
+      <input type="text" name="name" className={classes.getNameInput} required/>
     </div>
   );
 };
@@ -37,7 +37,7 @@ export const GetFavCoins = (props) => {
           name="favCoins"
           value="BTC"
           onChange={updateCheckedHandler}
-        />{" "}
+        />
         Bitcoin
       </label>
       <label>
@@ -46,7 +46,7 @@ export const GetFavCoins = (props) => {
           name="favCoins"
           value="ETH"
           onChange={updateCheckedHandler}
-        />{" "}
+        />
         Ethereum
       </label>
       <label>
@@ -55,7 +55,7 @@ export const GetFavCoins = (props) => {
           name="favCoins"
           value="USDT"
           onChange={updateCheckedHandler}
-        />{" "}
+        />
         Tether USD
       </label>
       <label>
@@ -64,7 +64,7 @@ export const GetFavCoins = (props) => {
           name="favCoins"
           value="XRP"
           onChange={updateCheckedHandler}
-        />{" "}
+        />
         Ripple
       </label>
       <label>
@@ -73,15 +73,30 @@ export const GetFavCoins = (props) => {
           name="favCoins"
           value="SOL"
           onChange={updateCheckedHandler}
-        />{" "}
+        />
         Solana
       </label>
     </div>
   );
 };
 
-export const GetIncome = (props) => {};
+export const GetIncome = (props) => {
+    return <div>
+        <h2>How much did you make this month?</h2>
+        <input type="number" name="income" required/>
+    </div>
+};
 
-export const GetIncomeGoals = (props) => {};
+export const GetIncomeGoals = (props) => {
+    return <div>
+    <h2>How much do you wish to make per month?</h2>
+    <input type="number" name="income" required/>
+</div>
+};
 
-export const GetExpenseGoals = (props) => {};
+export const GetExpenseGoals = (props) => {
+    return <div>
+    <h2>Lastly, How much do you intend to spend this month?</h2>
+    <input type="number" name="income" required/>
+</div>
+};
