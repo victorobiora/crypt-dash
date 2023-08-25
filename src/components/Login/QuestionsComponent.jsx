@@ -12,36 +12,67 @@ export const GetName = (props) => {
 
 export const GetFavCoins = (props) => {
   const [checkedCoins, setCheckedCoins] = useState([]);
-/*
+
   const updateCheckedHandler = (event) => {
-    const checker = checkedCoins.findIndex((el) => el === event.target.value);
-    if (!event.target.checked && checkedCoins.length > 0) {
-        setCheckedCoins(prevState => {
-            return prevState.filter(el => el !== event.target.value)
-        })
+    if (event.target.checked&& checkedCoins.length !== 2) {
+      setCheckedCoins((prevState) => {
+        return [...prevState, event.target.value];
+      });
+    } else if (event.target.checked && checkedCoins.length === 2) {
+      event.target.checked = false;
+    } else {
+      setCheckedCoins((prevState) =>
+        prevState.filter((el) => el !== event.target.value)
+      );
     }
-  };*/
+  };
+
+  console.log(checkedCoins);
   return (
     <div className={classes.getFavCoins}>
       <h2> Please select two coins you love below </h2>
       <label>
-        <input type="checkbox" name="favCoins" value="BTC" /> Bitcoin
+        <input
+          type="checkbox"
+          name="favCoins"
+          value="BTC"
+          onChange={updateCheckedHandler}
+        />{" "}
+        Bitcoin
       </label>
       <label>
-        <input type="checkbox" name="favCoins" value="ETH" /> Ethereum
+        <input
+          type="checkbox"
+          name="favCoins"
+          value="ETH"
+          onChange={updateCheckedHandler}
+        />{" "}
+        Ethereum
       </label>
       <label>
-        <input type="checkbox" name="favCoins" value="USDT" /> Tether USD
+        <input
+          type="checkbox"
+          name="favCoins"
+          value="USDT"
+          onChange={updateCheckedHandler}
+        />{" "}
+        Tether USD
       </label>
       <label>
-        <input type="checkbox" name="favCoins" value="XRP" /> Ripple
+        <input
+          type="checkbox"
+          name="favCoins"
+          value="XRP"
+          onChange={updateCheckedHandler}
+        />{" "}
+        Ripple
       </label>
       <label>
         <input
           type="checkbox"
           name="favCoins"
           value="SOL"
-          onChange={''}
+          onChange={updateCheckedHandler}
         />{" "}
         Solana
       </label>
