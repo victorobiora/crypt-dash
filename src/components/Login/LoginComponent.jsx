@@ -4,7 +4,7 @@ import * as QuestionsComponents from './QuestionsComponent'
 const LoginComponent = (props) => {
 
   return (
-    <section className="new_Page">
+    <section className={`${classes.logInContainer} new_Page` }>
       <div className={classes.introText}>
         <h1>Welcome to Crypt Dash</h1>
         <h4>
@@ -12,7 +12,7 @@ const LoginComponent = (props) => {
         </h4>
       </div>
       <form>
-        {<QuestionsComponents.GetIncome />}
+        {<QuestionsComponents.GetIncome/>}
         <button>Next</button>
       </form>
     </section>

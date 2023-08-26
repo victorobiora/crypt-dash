@@ -3,8 +3,8 @@ import { useState } from "react";
 
 export const GetName = (props) => {
   return (
-    <div className={classes.getNameContainer}>
-      <h2>What is your name?</h2>
+    <div className={classes.getContainer}>
+      <h3>What is your name?</h3>
       <input type="text" name="name" className={classes.getNameInput} required/>
     </div>
   );
@@ -81,22 +81,22 @@ export const GetFavCoins = (props) => {
 };
 
 export const GetIncome = (props) => {
-    return <div>
-        <h2>How much did you make this month?</h2>
+    return <div className={classes.getContainer}>
+        <h3>How much did you make this month?</h3>
         <input type="number" name="income" required/>
     </div>
 };
 
 export const GetIncomeGoals = (props) => {
-    return <div>
-    <h2>How much do you wish to make per month?</h2>
+    return <div className={classes.getContainer}>
+    <h3>How much do you wish to make per month?</h3>
     <input type="number" name="income" required/>
 </div>
 };
 
 export const GetExpenseGoals = (props) => {
-    return <div>
-    <h2>Lastly, How much do you intend to spend this month?</h2>
+    return <div className={classes.getContainer}>
+    <h3>Lastly, How much do you intend to spend this month?</h3>
     <input type="number" name="income" required/>
 </div>
 };
