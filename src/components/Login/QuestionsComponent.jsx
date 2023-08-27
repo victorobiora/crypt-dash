@@ -102,14 +102,19 @@ export const GetIncome = (props) => {
   return (
     <div className={classes.getContainer}>
       <h3>How much did you make this month?</h3>
-      <input type="number" name="income" required onChange={event => {
-        props.setFormData(prevState => {
-          return {
-            ...prevState,
-            monthlyIncome: event.target.value 
-          }
-        })
-      }}/>
+      <input
+        type="number"
+        name="income"
+        required
+        onChange={(event) => {
+          props.setFormData((prevState) => {
+            return {
+              ...prevState,
+              monthlyIncome: event.target.value,
+            };
+          });
+        }}
+      />
     </div>
   );
 };
@@ -118,7 +123,19 @@ export const GetIncomeGoals = (props) => {
   return (
     <div className={classes.getContainer}>
       <h3>How much do you wish to make per month?</h3>
-      <input type="number" name="income" required />
+      <input
+        type="number"
+        name="income"
+        required
+        onChange={(event) => {
+          props.setFormData((prevState) => {
+            return {
+              ...prevState,
+              incomeTarget: event.target.value,
+            };
+          });
+        }}
+      />
     </div>
   );
 };
@@ -127,7 +144,19 @@ export const GetExpenseGoals = (props) => {
   return (
     <div className={classes.getContainer}>
       <h3>Lastly, How much do you intend to spend this month?</h3>
-      <input type="number" name="income" required />
+      <input
+        type="number"
+        name="income"
+        required
+        onChange={(event) => {
+          props.setFormData((prevState) => {
+            return {
+              ...prevState,
+              expenseTarget: event.target.value,
+            };
+          });
+        }}
+      />
     </div>
   );
 };

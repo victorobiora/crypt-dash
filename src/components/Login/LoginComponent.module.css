@@ -6,6 +6,17 @@ background: linear-gradient(to bottom,  rgb(208, 205, 205) 50%, rgb(8, 8, 173));
 
 }
 
+.logInContainer button {
+    margin: 0 1rem;
+    height: 2rem;
+    padding: 0 0.9rem;
+    border-radius: 0.3rem;
+    border-color: transparent;
+    cursor: pointer;
+    font-style: italic;
+}
+
+
 .introText {
     margin-bottom: 2rem;
 }
