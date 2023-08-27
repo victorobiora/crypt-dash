@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import classes from "./QuestionsComponent.module.css";
 import { useState } from "react";
 
@@ -5,16 +6,33 @@ export const GetName = (props) => {
   return (
     <div className={classes.getContainer}>
       <h3>What is your name?</h3>
-      <input type="text" name="name" className={classes.getNameInput} required/>
+      <input
+        type="text"
+        name="name"
+        className={classes.getNameInput}
+        required
+        onChange={(event) => {
+          props.setFormData({ name: event.target.value });
+        }}
+      />
     </div>
   );
 };
 
-export const GetFavCoins = (props) => {
+export const GetFavCoins = ({ setFormData }) => {
   const [checkedCoins, setCheckedCoins] = useState([]);
 
+  useEffect(() => {
+    setFormData((prevState) => {
+      return {
+        ...prevState,
+        pickedCoins: checkedCoins,
+      };
+    });
+  }, [checkedCoins, setFormData]);
+
   const updateCheckedHandler = (event) => {
-    if (event.target.checked&& checkedCoins.length !== 2) {
+    if (event.target.checked && checkedCoins.length !== 2) {
       setCheckedCoins((prevState) => {
         return [...prevState, event.target.value];
       });
@@ -81,22 +99,35 @@ export const GetFavCoins = (props) => {
 };
 
 export const GetIncome = (props) => {
-    return <div className={classes.getContainer}>
-        <h3>How much did you make this month?</h3>
-        <input type="number" name="income" required/>
+  return (
+    <div className={classes.getContainer}>
+      <h3>How much did you make this month?</h3>
+      <input type="number" name="income" required onChange={event => {
+        props.setFormData(prevState => {
+          return {
+            ...prevState,
+            monthlyIncome: event.target.value 
+          }
+        })
+      }}/>
     </div>
+  );
 };
 
 export const GetIncomeGoals = (props) => {
-    return <div className={classes.getContainer}>
-    <h3>How much do you wish to make per month?</h3>
-    <input type="number" name="income" required/>
-</div>
+  return (
+    <div className={classes.getContainer}>
+      <h3>How much do you wish to make per month?</h3>
+      <input type="number" name="income" required />
+    </div>
+  );
 };
 
 export const GetExpenseGoals = (props) => {
-    return <div className={classes.getContainer}>
-    <h3>Lastly, How much do you intend to spend this month?</h3>
-    <input type="number" name="income" required/>
-</div>
+  return (
+    <div className={classes.getContainer}>
+      <h3>Lastly, How much do you intend to spend this month?</h3>
+      <input type="number" name="income" required />
+    </div>
+  );
 };
