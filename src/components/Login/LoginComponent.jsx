@@ -1,8 +1,10 @@
 import classes from "./LoginComponent.module.css";
+import { useNavigate } from "react-router-dom";
 import * as QuestionsComponents from "./QuestionsComponent";
 import { useState } from "react";
 
 const LoginComponent = (props) => {
+  const navigate = useNavigate();
   const [caseNumber, setCaseNumber] = useState(0);
   const [isFormComplete, setIsFormComplete] = useState(false);
   const [FormData, setFormData] = useState({});
@@ -11,6 +13,9 @@ const LoginComponent = (props) => {
     event.preventDefault();
 
     console.log(caseNumber);
+    if (isFormComplete) {
+      navigate('/home', { state: FormData})
+    }
 
     if (caseNumber === 4) {
       setIsFormComplete(true);
