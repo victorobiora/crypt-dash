@@ -2,8 +2,12 @@ import classes from "./LoginComponent.module.css";
 import { useNavigate } from "react-router-dom";
 import * as QuestionsComponents from "./QuestionsComponent";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { dashActions } from "../../store/cryptStore";
+
 
 const LoginComponent = (props) => {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
   const [caseNumber, setCaseNumber] = useState(0);
   const [isFormComplete, setIsFormComplete] = useState(false);
@@ -14,7 +18,8 @@ const LoginComponent = (props) => {
 
     console.log(caseNumber);
     if (isFormComplete) {
-      navigate('/home', { state: FormData})
+      dispatch(dashActions.addToDashBoard(FormData))
+      navigate('/home')
     }
 
     if (caseNumber === 4) {

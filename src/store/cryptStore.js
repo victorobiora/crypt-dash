@@ -22,7 +22,11 @@ const generalDashBoardInitialState = {
 const generalDashBoard = createSlice({
   name: "generalDashBoard",
   initialState: generalDashBoardInitialState,
-  reducers: {},
+  reducers: {
+    addToDashBoard(state, action){
+        state.dashBoardDetails = action.payload
+    }
+  },
 });
 
 export const dashActions = generalDashBoard.actions

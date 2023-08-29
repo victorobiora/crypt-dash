@@ -48,3 +48,25 @@
   width: 100%;
 
 }
+
+.spinner {
+  height: 10%;
+  width: 8%;
+  position: relative;
+  top: 25%;
+  left: 45%;
+}
+
+.spinner svg {
+  position: relative;
+  left: 40%;
+}
+
+.please-wait-text{
+  width: 20rem;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  position: relative;
+  right: 5%;
+}

@@ -5,7 +5,7 @@ const RootLayout = (props) => {
     <main className="new_Page">
       <Outlet />
     </main>
-  );
-};
+  )
+}
 
 export default RootLayout;
