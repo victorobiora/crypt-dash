@@ -5,31 +5,73 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { dashActions } from "../../store/cryptStore";
 
-
 const LoginComponent = (props) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [caseNumber, setCaseNumber] = useState(0);
   const [isFormComplete, setIsFormComplete] = useState(false);
-  const [FormData, setFormData] = useState({});
+  const [FormData, setFormData] = useState({
+    name: "",
+    pickedCoins: [],
+    monthlyIncome: 0,
+    incomeTarget: 0,
+    expenseTarget: 0
+  });
 
   const increaseCaseNumber = (event) => {
     event.preventDefault();
-
-    console.log(caseNumber);
+  
     if (isFormComplete) {
       dispatch(dashActions.addToDashBoard(FormData))
       navigate('/home')
     }
 
-    if (caseNumber === 4) {
-      setIsFormComplete(true);
-    } else if (caseNumber < 4) {
+    if (caseNumber === 0) {
+      if (FormData.name === "" || FormData.name.length <= 1) {
+        return alert("Please enter your name");
+      } else {
+        setCaseNumber((prevState) => {
+          return prevState + 1;
+        });
+      }
+    } else if (caseNumber === 1) {
+      if (FormData.pickedCoins.length !== 2) {
+        return alert("Please choose two coins");
+      } else {
+        setCaseNumber((prevState) => {
+          return prevState + 1;
+        });
+      }
+    } else if (caseNumber === 2) {
+      if (FormData.monthlyIncome <= 0 || FormData.monthlyIncome === undefined) {
+        return alert("Please enter your income");
+      } else {
+        setCaseNumber((prevState) => {
+          return prevState + 1;
+        });
+      }
+    } else if (caseNumber === 3) {
+      if (FormData.monthlyIncome > FormData.incomeTarget || FormData.incomeTarget === undefined) {
+        return alert("Your income goal has to be higher than current income");
+      } else {
+        setCaseNumber((prevState) => {
+          return prevState + 1;
+        });
+      }
+    }else if(caseNumber === 4){
+      if (FormData.expenseTarget <= 0) {
+        return alert("Please enter an expense target");
+      } else {
+        setCaseNumber((prevState) => {
+          return prevState + 1;
+        });
+        setIsFormComplete(true);
+      }
+    }
+
+    if (caseNumber < 4) {
       setIsFormComplete(false);
     }
-    setCaseNumber((prevState) => {
-      return prevState + 1;
-    });
   };
 
   const decreaseCaseNumber = (event) => {

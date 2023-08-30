@@ -110,7 +110,7 @@ export const GetIncome = (props) => {
           props.setFormData((prevState) => {
             return {
               ...prevState,
-              monthlyIncome: event.target.value,
+              monthlyIncome: parseInt(event.target.value),
             };
           });
         }}
@@ -131,7 +131,7 @@ export const GetIncomeGoals = (props) => {
           props.setFormData((prevState) => {
             return {
               ...prevState,
-              incomeTarget: event.target.value,
+              incomeTarget: parseInt(event.target.value),
             };
           });
         }}
@@ -152,7 +152,7 @@ export const GetExpenseGoals = (props) => {
           props.setFormData((prevState) => {
             return {
               ...prevState,
-              expenseTarget: event.target.value,
+              expenseTarget: parseInt(event.target.value),
             };
           });
         }}
