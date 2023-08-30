@@ -53,7 +53,7 @@ export const GetFavCoins = ({ setFormData }) => {
         <input
           type="checkbox"
           name="favCoins"
-          value="BTC"
+          value="bitcoin"
           onChange={updateCheckedHandler}
         />
         Bitcoin
@@ -62,7 +62,7 @@ export const GetFavCoins = ({ setFormData }) => {
         <input
           type="checkbox"
           name="favCoins"
-          value="ETH"
+          value="ethereum"
           onChange={updateCheckedHandler}
         />
         Ethereum
@@ -71,7 +71,7 @@ export const GetFavCoins = ({ setFormData }) => {
         <input
           type="checkbox"
           name="favCoins"
-          value="USDT"
+          value="tether"
           onChange={updateCheckedHandler}
         />
         Tether USD
@@ -80,7 +80,7 @@ export const GetFavCoins = ({ setFormData }) => {
         <input
           type="checkbox"
           name="favCoins"
-          value="XRP"
+          value="ripple"
           onChange={updateCheckedHandler}
         />
         Ripple
@@ -89,7 +89,7 @@ export const GetFavCoins = ({ setFormData }) => {
         <input
           type="checkbox"
           name="favCoins"
-          value="SOL"
+          value="solana"
           onChange={updateCheckedHandler}
         />
         Solana
