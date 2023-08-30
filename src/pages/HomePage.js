@@ -1,12 +1,16 @@
 import HomeComponent from "../components/home/HomeComponent";
 import { Fragment } from "react";
 import { useEffect, useState } from "react";
+import { dashActions } from "../store/cryptStore";
 import { TailSpin } from "react-loader-spinner";
-import { useSelector, useDispatch } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useDispatch } from "react-redux";
 
 const HomePage = () => {
   const [isDataBack, setIsDataBack] = useState(false);
+  const dispatch = useDispatch()
   const formData = useSelector((state) => state.dashBoardDetails);
+  const favCoins = useSelector((state) => state.favCoins);
 
   useEffect(() => {
     const getCoinsData = async () => {
@@ -44,15 +48,17 @@ const HomePage = () => {
           }
         })
       );
-      console.log(newFavCoinsArray)
+     dispatch(dashActions.addFavCoins(newFavCoinsArray))
+     setIsDataBack(true)
     };
 
     getCoinsData();
   }, [formData]);
 
+  console.log(favCoins)
   return (
     <Fragment>
-      {isDataBack && (
+      {!isDataBack && (
         <section className="spinner">
           <TailSpin
             color="#0047AB"
@@ -66,7 +72,7 @@ const HomePage = () => {
         </section>
       )}
 
-      {!isDataBack && <HomeComponent />}
+      {isDataBack && <HomeComponent />}
     </Fragment>
   );
 };

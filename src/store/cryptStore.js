@@ -8,6 +8,7 @@ const generalDashBoardInitialState = {
     incomeGoals: 0,
     expenseGoals: 0,
   },
+  favCoins : [],
   transfers: [
     {
       mode: "Transfer In",
@@ -25,6 +26,9 @@ const generalDashBoard = createSlice({
   reducers: {
     addToDashBoard(state, action){
         state.dashBoardDetails = action.payload
+    },
+    addFavCoins(state, action){
+      state.favCoins = action.payload
     }
   },
 });
