@@ -45,7 +45,6 @@ export const GetFavCoins = ({ setFormData }) => {
     }
   };
 
-  console.log(checkedCoins);
   return (
     <div className={classes.getFavCoins}>
       <h2> Please select two coins you love below </h2>

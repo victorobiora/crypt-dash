@@ -9,6 +9,7 @@ const generalDashBoardInitialState = {
     expenseGoals: 0,
   },
   favCoins : [],
+  liveChartCoins: [],
   transfers: [
     {
       mode: "Transfer In",
@@ -27,8 +28,9 @@ const generalDashBoard = createSlice({
     addToDashBoard(state, action){
         state.dashBoardDetails = action.payload
     },
-    addFavCoins(state, action){
-      state.favCoins = action.payload
+    addRequestedCoins(state, action){
+      state.favCoins = action.payload.newFavCoinsArray
+      state.liveChartCoins = action.payload.finalLiveChartData
     }
   },
 });

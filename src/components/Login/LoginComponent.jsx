@@ -88,14 +88,12 @@ const LoginComponent = (props) => {
       case 0:
         return (
           <QuestionsComponents.GetName
-            FormData={FormData}
             setFormData={setFormData}
           />
         );
       case 1:
         return (
           <QuestionsComponents.GetFavCoins
-            FormData={FormData}
             setFormData={setFormData}
           />
         );
@@ -103,21 +101,18 @@ const LoginComponent = (props) => {
       case 2:
         return (
           <QuestionsComponents.GetIncome
-            FormData={FormData}
             setFormData={setFormData}
           />
         );
       case 3:
         return (
           <QuestionsComponents.GetIncomeGoals
-            FormData={FormData}
             setFormData={setFormData}
           />
         );
       case 4:
         return (
           <QuestionsComponents.GetExpenseGoals
-            FormData={FormData}
             setFormData={setFormData}
           />
         );
@@ -126,7 +121,6 @@ const LoginComponent = (props) => {
     }
   };
 
-  console.log(FormData);
 
   return (
     <section className={`${classes.logInContainer} new_Page`}>
