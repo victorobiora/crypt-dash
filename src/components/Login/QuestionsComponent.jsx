@@ -139,6 +139,29 @@ export const GetIncomeGoals = (props) => {
   );
 };
 
+
+export const GetExpense = (props) => {
+  return (
+    <div className={classes.getContainer}>
+      <h3>How much have you spent this month?</h3>
+      <input
+        type="number"
+        name="expense"
+        required
+        onChange={(event) => {
+          props.setFormData((prevState) => {
+            return {
+              ...prevState,
+              monthlyExpense: parseInt(event.target.value),
+            };
+          });
+        }}
+      />
+    </div>
+  );
+};
+
+
 export const GetExpenseGoals = (props) => {
   return (
     <div className={classes.getContainer}>

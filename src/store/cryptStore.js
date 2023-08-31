@@ -3,10 +3,10 @@ import { configureStore } from "@reduxjs/toolkit";
 
 const generalDashBoardInitialState = {
   dashBoardDetails: {
-    totalEarnings: 0,
+    monthlyIncome: 0,
     totalSpendings: 0,
-    incomeGoals: 0,
-    expenseGoals: 0,
+    incomeTarget: 0,
+    expenseTarget: 0,
   },
   favCoins : [],
   liveChartCoins: [],
