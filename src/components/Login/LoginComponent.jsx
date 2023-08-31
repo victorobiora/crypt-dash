@@ -60,6 +60,14 @@ const LoginComponent = (props) => {
       }
     }else if(caseNumber === 4){
       if (FormData.expenseTarget <= 0) {
+        return alert("Please enter how much you've spent this month");
+      } else {
+        setCaseNumber((prevState) => {
+          return prevState + 1;
+        });
+      }
+    }else if(caseNumber === 5){
+      if (FormData.monthlyExpense <= 0) {
         return alert("Please enter an expense target");
       } else {
         setCaseNumber((prevState) => {
@@ -69,7 +77,7 @@ const LoginComponent = (props) => {
       }
     }
 
-    if (caseNumber < 4) {
+    if (caseNumber < 5) {
       setIsFormComplete(false);
     }
   };
@@ -110,7 +118,13 @@ const LoginComponent = (props) => {
             setFormData={setFormData}
           />
         );
-      case 4:
+        case 4: 
+        return (
+          <QuestionsComponents.GetExpense
+            setFormData={setFormData}
+          />
+        );
+      case 5:
         return (
           <QuestionsComponents.GetExpenseGoals
             setFormData={setFormData}

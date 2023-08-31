@@ -36,7 +36,7 @@ console.log(inComeDetails)
           svg={svgObject.chartDown}
           bColor="rgb(241, 170, 130)"
           text="Total Spendings"
-          amount={inComeDetails.totalSpendings}
+          amount={inComeDetails.monthlyExpense}
         />
         <WalletDetail
           svg={svgObject.spending}
