@@ -16,7 +16,7 @@ console.log(inComeDetails)
           <div>
             <img src={imgLink} alt="profile-pic" />
           </div>
-          <strong>Good Morning, Victor!</strong>
+          <strong>Good Morning, {inComeDetails.name}!</strong>
         </div>
       </div>
       <section className={styles.overview}>

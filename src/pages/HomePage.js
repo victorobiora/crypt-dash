@@ -68,8 +68,11 @@ const HomePage = () => {
             const responseB = await liveChartResponseCall.json();
 
             return {
-              name: el.id,
+              name: el.name,
+              id: el.id,
               symbol: el.symbol,
+              image: el.image,
+              price: el.current_price,
               ...responseB,
             };
           })
