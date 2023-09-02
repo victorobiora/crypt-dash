@@ -1,5 +1,6 @@
 import classes from "./ActivitySummary.module.css";
 import { svgObject } from "../../../../svg";
+import LineChart from "../../../charts/LineChart";
 
 const ActivitySummary = (props) => {
   console.log(new Date());
@@ -49,7 +50,9 @@ const ActivitySummary = (props) => {
           <p>Activity Graph</p>
           <h4>$125k</h4>
         </div>
-        <div></div>
+        <div>
+          <LineChart/>
+        </div>
       </div>
       <div className={classes.activity_history}>
         <div className={classes.activity_history_head}>

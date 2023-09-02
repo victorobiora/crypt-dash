@@ -14,7 +14,7 @@ const PortfolioComponent = (props) => {
       </div>
       <div className={classes.portfolio_display}>
         <h4>My Portfolio</h4>
-        <h2>${userDetails.portfolioBalance}</h2>
+        <h2>${userDetails.portfolioBalance.toFixed(2)}</h2>
         <div className={classes.portfolio_buttons}>
           <button>
             <div className={classes.portfolio_svg}>{svgObject.deposit}</div>
