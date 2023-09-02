@@ -56,6 +56,10 @@
    height: 6.5rem;
 }
 
+.favorites_item_chart canvas {
+  height: 100%;
+}
+
 .favorites_item > div:last-child {
   display: flex;
   flex-direction: column;

@@ -40,9 +40,15 @@
   width: 1.5rem;
   border-radius: 50%;
   margin-right: 0.5rem;
+  color: rgb(252, 227, 85, 0.7);
 }
 
 .live_item_picture img {
   height: 100%;
   width: 100%;
+}
+
+.live_item_chart {
+  width: 40%;
+  height: 2.7rem;
 }

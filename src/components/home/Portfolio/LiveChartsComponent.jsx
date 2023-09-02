@@ -1,12 +1,14 @@
 import classes from "./LiveChartsComponent.module.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import LineChart from "../../charts/LineChart";
 
 const LiveChartsComponent = (props) => {
 
   const liveCoinsArray = useSelector(state => state.liveChartCoins);
   
-  const displayedLiveCoins = liveCoinsArray.slice(0, 3)
+  const displayedLiveCoins = liveCoinsArray.slice(0, 3);
+  console.log(displayedLiveCoins)
 
   return (
     <section className={classes.container}>
@@ -26,7 +28,9 @@ const LiveChartsComponent = (props) => {
                 <h5>{item.symbol.toUpperCase()}</h5>
               </div>
             </div>
-            <div className={classes.live_item_chart}></div>
+            <div className={classes.live_item_chart}>
+              <LineChart chartData={item.prices}/>
+            </div>
             <div className={classes.live_item_price}><h4>${item.price.toFixed(2)}</h4></div>
           </li>
         ))}

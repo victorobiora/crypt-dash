@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import classes from "./FavoritesComponent.module.css";
 import { useSelector } from "react-redux/es/hooks/useSelector";
+import LineChart from "../../charts/LineChart";
 
 const FavoritesComponent = (props) => {
   const favCoins = useSelector(state => state.favCoins)
@@ -26,7 +27,9 @@ const FavoritesComponent = (props) => {
               </div>
             </div>
 
-            <div className={classes.favorites_item_chart}></div>
+            <div className={classes.favorites_item_chart}>
+            <LineChart chartData={item.chartData}/>
+            </div>
             <div>
               <h3 className={classes.price}>${item.price}</h3>
               <h4 className={classes.percentageDiff}>{item.percentageDifference}%</h4>
