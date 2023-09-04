@@ -4,7 +4,11 @@ import { useSelector } from "react-redux";
 
 const ActivitySummary = (props) => {
 
-  const transfersList = useSelector(state => state.transfers)
+  const transfersList = useSelector(state => state.transfers);
+
+  const removeItemHandler = event => {
+    event.preventDefault()
+  }
 
   return (
     <section className={classes.summary_activity}>
@@ -46,7 +50,7 @@ const ActivitySummary = (props) => {
             <li className={classes.activity_item_amount}>
               <strong>$</strong>  {item.amount}
             </li>
-            <button className={classes.removeItem_button}><h3>X</h3></button> 
+            <button className={classes.removeItem_button} onClick={removeItemHandler}><h3>X</h3></button> 
           </ul>
         ))}
       </div>
