@@ -29,7 +29,7 @@ const LiveChartsComponent = (props) => {
               </div>
             </div>
             <div className={classes.live_item_chart}>
-              <LineChart chartData={item.prices}/>
+              <LineChart chartData={item.prices} colorCheck = {true}/>
             </div>
             <div className={classes.live_item_price}><h4>${item.price.toFixed(2)}</h4></div>
           </li>

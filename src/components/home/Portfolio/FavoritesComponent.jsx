@@ -28,7 +28,7 @@ const FavoritesComponent = (props) => {
             </div>
 
             <div className={classes.favorites_item_chart}>
-            <LineChart chartData={item.chartData}/>
+            <LineChart chartData={item.chartData} colorCheck={false}/>
             </div>
             <div>
               <h3 className={classes.price}>${item.price}</h3>

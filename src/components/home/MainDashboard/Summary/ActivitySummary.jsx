@@ -1,46 +1,10 @@
 import classes from "./ActivitySummary.module.css";
 import { svgObject } from "../../../../svg";
+import { useSelector } from "react-redux";
 
 const ActivitySummary = (props) => {
 
-  const activitiesArray = [
-    {
-      name: "Transfer In",
-      date: "May 1, 2022  12:34",
-      detail: "Salary",
-      amount: 3054.55,
-    },
-    {
-      name: "Transfer Out",
-      date: "May 8, 2022  18:23",
-      detail: "Dishwasher",
-      amount: 359.99,
-    },
-    {
-      name: "Transfer Out",
-      date: "May 12, 2022  17:58",
-      detail: "Car Fix",
-      amount: 1499.99
-    },
-    {
-      name: "Transfer In",
-      date: "May 19, 2022  07:00",
-      detail: "Web Dev Job",
-      amount: 4559.99
-    },
-    {
-      name: "Transfer Out",
-      date: "May 21, 2022  22:12",
-      detail: "Playstation Bought",
-      amount: 999.99
-    },
-    {
-      name: "Transfer Out",
-      date: "May 12, 2022  12:34",
-      detail: "Car Fix",
-      amount: 1499.99
-    }
-  ];
+  const transfersList = useSelector(state => state.transfers)
 
   return (
     <section className={classes.summary_activity}>
@@ -65,15 +29,15 @@ const ActivitySummary = (props) => {
             <div className={classes.addToActivity}>+</div>
           </div>
         </div>
-        {activitiesArray.map((item) => (
+        {transfersList.map((item) => (
           <ul className={classes.activity_item} key={Math.random() * 10000}>
             <li className={classes.activity_item_icon}>{svgObject.shop}</li>
             <li className={classes.activity_item_description}>
-              <h3>{item.name}</h3>
+              <h3>{item.mode}</h3>
               <p>{item.date}</p>
             </li>
             <li className={classes.activity_item_icon}>
-              {item.name === "Transfer Out"
+              {item.mode === "Transfer Out"
                 ? svgObject.redIcon
                 : svgObject.greenIcon}
             </li>
@@ -82,6 +46,7 @@ const ActivitySummary = (props) => {
             <li className={classes.activity_item_amount}>
               <strong>$</strong>  {item.amount}
             </li>
+            <button className={classes.removeItem_button}><h3>X</h3></button> 
           </ul>
         ))}
       </div>

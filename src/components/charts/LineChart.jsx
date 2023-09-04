@@ -22,18 +22,18 @@ ChartJS.register(
   Filler
 );
 
-const LineChart = ({ chartData }) => {
+const LineChart = ({ chartData, colorCheck }) => {
   console.log(chartData);
-/*
+
   const colorChecker = () => {
     console.log(chartData[0][1], chartData[chartData.length - 1][1]);
     if (chartData[0][1] > chartData[chartData.length - 1][1]) {
-      return "red";
+      return "rgba(233, 22, 22, 0.8)";
     } else {
-      return "rgba(255, 217, 0, 1)";
+      return " rgba(43, 187, 43, 0.8)";
     }
   };
-*/
+
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -84,8 +84,8 @@ const LineChart = ({ chartData }) => {
       {
         fill: true,
         data: chartData.map((el) => el[1]),
-        borderColor: "rgba(255, 217, 0, 1)",
-        backgroundColor: "rgb(252, 227, 85, 0.7)",
+        borderColor: colorCheck ? colorChecker() :  "rgba(255, 217, 0, 1)",
+        backgroundColor: colorCheck ? colorChecker() : "rgb(252, 227, 85, 0.7)",
       },
     ],
   };
