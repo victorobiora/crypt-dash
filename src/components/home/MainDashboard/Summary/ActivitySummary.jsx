@@ -1,14 +1,12 @@
 import classes from "./ActivitySummary.module.css";
-import { svgObject } from "../../../../svg";
+import ActivityItem from "./ActivityItem";
 import { useSelector } from "react-redux";
 
 const ActivitySummary = (props) => {
 
-  const transfersList = useSelector(state => state.transfers);
+ const transfersList = useSelector(state => state.transfers);
 
-  const removeItemHandler = event => {
-    event.preventDefault()
-  }
+
 
   return (
     <section className={classes.summary_activity}>
@@ -34,24 +32,7 @@ const ActivitySummary = (props) => {
           </div>
         </div>
         {transfersList.map((item) => (
-          <ul className={classes.activity_item} key={Math.random() * 10000}>
-            <li className={classes.activity_item_icon}>{svgObject.shop}</li>
-            <li className={classes.activity_item_description}>
-              <h3>{item.mode}</h3>
-              <p>{item.date}</p>
-            </li>
-            <li className={classes.activity_item_icon}>
-              {item.mode === "Transfer Out"
-                ? svgObject.redIcon
-                : svgObject.greenIcon}
-            </li>
-            <li className={classes.activity_detail}>{item.detail}</li>
-            <li className={classes.activity_item_icon}>{svgObject.coins}</li>
-            <li className={classes.activity_item_amount}>
-              <strong>$</strong>  {item.amount}
-            </li>
-            <button className={classes.removeItem_button} onClick={removeItemHandler}><h3>X</h3></button> 
-          </ul>
+        <ActivityItem item={item} key={item.id}/>
         ))}
       </div>
     </section>
