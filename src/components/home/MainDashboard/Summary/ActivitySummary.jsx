@@ -1,12 +1,16 @@
 import classes from "./ActivitySummary.module.css";
 import ActivityItem from "./ActivityItem";
 import { useSelector } from "react-redux";
+import AddSummary from "./AddSummary";
+import { useState } from "react";
 
 const ActivitySummary = (props) => {
-
+ const [showForm, setShowForm] = useState(false)
  const transfersList = useSelector(state => state.transfers);
 
-
+const toggleFormDisplay = ()=> {
+    setShowForm(prevState => !prevState)
+}
 
   return (
     <section className={classes.summary_activity}>
@@ -30,6 +34,7 @@ const ActivitySummary = (props) => {
             </form>
             <div className={classes.addToActivity}>+</div>
           </div>
+          <AddSummary setForm={toggleFormDisplay}/>
         </div>
         {transfersList.map((item) => (
         <ActivityItem item={item} key={item.id}/>
