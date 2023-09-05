@@ -13,7 +13,7 @@ const AddSummary = ({ setForm }) => {
 
   return (
     <section className={classes.container}>
-      <div className={classes.backdrop}></div>
+      <div className={classes.backdrop} onClick={removeFormHandler}></div>
       <form>
         <select className={classes.selectTransaction} name="transfer">
           <option value="Transfer In">Credit</option>

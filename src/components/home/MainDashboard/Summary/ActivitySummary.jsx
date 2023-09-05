@@ -5,12 +5,15 @@ import AddSummary from "./AddSummary";
 import { useState } from "react";
 
 const ActivitySummary = (props) => {
- const [showForm, setShowForm] = useState(false)
- const transfersList = useSelector(state => state.transfers);
+  const [showForm, setShowForm] = useState(false);
+  const transfersList = useSelector((state) => state.transfers);
 
-const toggleFormDisplay = ()=> {
-    setShowForm(prevState => !prevState)
-}
+  const showFormDisplay = () => {
+    setShowForm(true);
+  };
+  const toggleFormDisplay = () => {
+    setShowForm((prevState) => !prevState);
+  };
 
   return (
     <section className={classes.summary_activity}>
@@ -19,9 +22,7 @@ const toggleFormDisplay = ()=> {
           <p>Activity Graph</p>
           <h4>$125k</h4>
         </div>
-        <div>
-
-        </div>
+        <div></div>
       </div>
       <div className={classes.activity_history}>
         <div className={classes.activity_history_head}>
@@ -32,12 +33,14 @@ const toggleFormDisplay = ()=> {
             <form>
               <input type="date" />
             </form>
-            <div className={classes.addToActivity}>+</div>
+            <div className={classes.addToActivity} onClick={showFormDisplay}>
+              +
+            </div>
           </div>
-          <AddSummary setForm={toggleFormDisplay}/>
+          {showForm && <AddSummary setForm={toggleFormDisplay} />}
         </div>
         {transfersList.map((item) => (
-        <ActivityItem item={item} key={item.id}/>
+          <ActivityItem item={item} key={item.id} />
         ))}
       </div>
     </section>
