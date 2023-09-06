@@ -13,11 +13,6 @@ const AddSummary = ({ setForm }) => {
 
   const addTransferHandler = (event) => {
     event.preventDefault();
-    console.log(
-      amountRef.current.value,
-      selectRef.current.value,
-      textRef.current.value.length
-    );
     if (
       amountRef.current.value.length > 0 &&
       textRef.current.value.length > 0
