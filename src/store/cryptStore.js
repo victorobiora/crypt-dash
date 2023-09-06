@@ -15,7 +15,7 @@ const generalDashBoardInitialState = {
   transfers: [
     {
       mode: "Transfer In",
-      date: " 23 / 4 / 2023",
+      date: " 23 - 4 - 2023",
       time: "23:04",
       amount: 1435,
       id: Math.round(Math.random()*2000000000),
@@ -23,7 +23,7 @@ const generalDashBoardInitialState = {
     },
     {
       mode: "Transfer Out",
-      date: " 27 / 4 / 2023",
+      date: " 27 - 4 - 2023",
       time: "08:34",
       amount: 5,
       id: Math.round(Math.random()*2000000000),
@@ -44,6 +44,9 @@ const generalDashBoard = createSlice({
     addRequestedCoins(state, action) {
       state.favCoins = action.payload.newFavCoinsArray;
       state.liveChartCoins = action.payload.finalLiveChartData;
+    },
+    addToTransferList(state, action){
+      state.transfers.push(action.payload)
     },
     removefromTransferList(state, action){
       state.transfers = state.transfers.filter(el => el.id !== action.payload)
