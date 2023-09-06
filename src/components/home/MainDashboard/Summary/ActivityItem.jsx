@@ -4,12 +4,11 @@ import { dashActions } from "../../../../store/cryptStore";
 import { useDispatch } from "react-redux";
 
 const ActivityItem = ({ item }) => {
-    const dispatch = useDispatch()
-
+  const dispatch = useDispatch();
 
   const removeItemHandler = (event) => {
     event.preventDefault();
-    dispatch(dashActions.removefromTransferList(item.id))
+    dispatch(dashActions.removefromTransferList(item.id));
   };
 
   return (
@@ -25,12 +24,10 @@ const ActivityItem = ({ item }) => {
       <li className={classes.activity_detail}>{item.detail}</li>
       <li className={classes.activity_item_icon}>{svgObject.coins}</li>
       <li className={classes.activity_item_amount}>
-        <strong>$</strong> {item.amount}
+        <strong>$</strong> {item.mode === "Transfer Out" ? "-" : "+"}{" "}
+        {item.amount.toFixed(2)}
       </li>
-      <button
-        className={classes.removeItem_button}
-        onClick={removeItemHandler}
-      >
+      <button className={classes.removeItem_button} onClick={removeItemHandler}>
         <h3>X</h3>
       </button>
     </ul>

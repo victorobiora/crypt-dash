@@ -60,3 +60,7 @@
 .cancelButton {
   background-color: rgb(255, 45, 45);
 }
+
+.errorText {
+  color: rgb(255, 45, 45);
+}

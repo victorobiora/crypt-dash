@@ -5,7 +5,7 @@ import { dashActions } from "../../../../store/cryptStore";
 
 const AddSummary = ({ setForm }) => {
   const [isFormCorrect, setIsFormCorrect] = useState(null);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const amountRef = useRef();
   const selectRef = useRef();
@@ -17,19 +17,21 @@ const AddSummary = ({ setForm }) => {
       amountRef.current.value.length > 0 &&
       textRef.current.value.length > 0
     ) {
-const currentDateTime = new Date();
+      const currentDateTime = new Date();
 
-const formattedDate = currentDateTime.toISOString().slice(0, 10);
-const formattedTime = currentDateTime.toTimeString().slice(0, 8);
+      const formattedDate = currentDateTime.toISOString().slice(0, 10);
+      const formattedTime = currentDateTime.toTimeString().slice(0, 8);
 
-      dispatch(dashActions.addToTransferList({
-        mode: selectRef.current.value,
-        date: formattedDate,
-        time: formattedTime,
-        amount: amountRef.current.value,
-        id: Math.floor(Math.random () * 200000000),
-        detail: textRef.current.value
-      }))
+      dispatch(
+        dashActions.addToTransferList({
+          mode: selectRef.current.value,
+          date: formattedDate,
+          time: formattedTime,
+          amount: parseInt(amountRef.current.value),
+          id: Math.floor(Math.random() * 200000000),
+          detail: textRef.current.value,
+        })
+      );
       setIsFormCorrect(true);
       setForm();
     } else {
@@ -46,7 +48,11 @@ const formattedTime = currentDateTime.toTimeString().slice(0, 8);
     <section className={classes.container}>
       <div className={classes.backdrop} onClick={removeFormHandler}></div>
       <form>
-        {isFormCorrect === false && <div>Please answer all questions...</div>}
+        {isFormCorrect === false && (
+          <div className={classes.errorText}>
+            Please answer all questions...
+          </div>
+        )}
         <select
           className={classes.selectTransaction}
           name="transfer"
