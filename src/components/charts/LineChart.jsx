@@ -1,6 +1,5 @@
 import { Line } from "react-chartjs-2";
-import React from "react";
-import "chartjs-plugin-datalabels";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -86,6 +85,8 @@ const LineChart = ({ chartData, colorCheck }) => {
         data: chartData.map((el) => el[1]),
         borderColor: colorCheck ? colorChecker() :  "rgba(255, 217, 0, 1)",
         backgroundColor: colorCheck ? colorChecker() : "rgb(252, 227, 85, 0.7)",
+        pointBorderColor: 'transparent',
+        pointBackgroundColor: 'transparent'
       },
     ],
   };

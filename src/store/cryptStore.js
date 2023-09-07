@@ -17,16 +17,16 @@ const generalDashBoardInitialState = {
       mode: "Transfer In",
       date: " 23 - 4 - 2023",
       time: "23:04",
-      amount: 1435,
-      id: Math.round(Math.random()*2000000000),
+      amount: 140,
+      id: Math.round(Math.random() * 2000000000),
       detail: "Salary",
     },
     {
       mode: "Transfer Out",
       date: " 27 - 4 - 2023",
       time: "08:34",
-      amount: 5,
-      id: Math.round(Math.random()*2000000000),
+      amount: 55,
+      id: Math.round(Math.random() * 2000000000),
       detail: "car laundry",
     },
   ],
@@ -45,12 +45,21 @@ const generalDashBoard = createSlice({
       state.favCoins = action.payload.newFavCoinsArray;
       state.liveChartCoins = action.payload.finalLiveChartData;
     },
-    addToTransferList(state, action){
-      state.transfers.push(action.payload)
+    addToTransferList(state, action) {
+      state.transfers.push(action.payload);
+      state.portfolioBalance = state.transfers.reduce((acc, cur) => {
+        if (cur.mode === "Transfer Out") {
+          return acc + -cur.amount;
+        } else {
+          return acc + cur.amount;
+        }
+      }, 0);
     },
-    removefromTransferList(state, action){
-      state.transfers = state.transfers.filter(el => el.id !== action.payload)
-    }
+    removefromTransferList(state, action) {
+      state.transfers = state.transfers.filter(
+        (el) => el.id !== action.payload
+      );
+    },
   },
 });
 

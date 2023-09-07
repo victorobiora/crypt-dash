@@ -24,7 +24,7 @@ const ActivityItem = ({ item }) => {
       <li className={classes.activity_detail}>{item.detail}</li>
       <li className={classes.activity_item_icon}>{svgObject.coins}</li>
       <li className={classes.activity_item_amount}>
-        <strong>$</strong> {item.mode === "Transfer Out" ? "-" : "+"}{" "}
+        <strong>$</strong> {item.mode === "Transfer Out" ? '-' : "+"}{" "}
         {item.amount.toFixed(2)}
       </li>
       <button className={classes.removeItem_button} onClick={removeItemHandler}>
