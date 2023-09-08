@@ -3,12 +3,18 @@
   src: url('./fonts/Teko-Regular.ttf');
 }
 
+@font-face{
+  font-family: Product-sans;
+  src: url('./fonts/ProductSans-Light.ttf')
+}
+
 body {
   height: 100vh;
   margin: 0;
-  font-family: Teko-Regular, 'Roboto', 'Oxygen',
+  font-family: Product-sans, 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+    font-size: 0.9rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

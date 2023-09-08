@@ -31,7 +31,7 @@ const ActivitySummary = (props) => {
       <div className={classes.activity_history}>
         <div className={classes.activity_history_head}>
           <div className={classes.history_heading1}>
-            <h3>History</h3>
+            <h4>History</h4>
           </div>
           <div className={classes.history_heading2}>
             <form>

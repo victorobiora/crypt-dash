@@ -141,7 +141,7 @@ const LoginComponent = (props) => {
       <div className={classes.introText}>
         <h1>Welcome to Crypt Dash</h1>
         <h4>
-          Before we head to the dashboard, Please answer some questions for us
+          Before we head to the dashboard, Please answer some questions for us...
         </h4>
       </div>
       <form>

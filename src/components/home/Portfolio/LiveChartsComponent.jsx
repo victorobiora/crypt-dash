@@ -7,13 +7,13 @@ const LiveChartsComponent = (props) => {
 
   const liveCoinsArray = useSelector(state => state.liveChartCoins);
   
-  const displayedLiveCoins = liveCoinsArray.slice(0, 3);
+  const displayedLiveCoins = liveCoinsArray.slice(0, 4);
   console.log(displayedLiveCoins)
 
   return (
     <section className={classes.container}>
       <div className={classes.liveCharts_heading}>
-        <h4> Live Charts </h4>
+        <h5> Live Charts </h5>
         <Link href="/">See all</Link>
       </div>
       <ul className={classes.liveCharts_container}>

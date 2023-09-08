@@ -1,7 +1,7 @@
 .summary_activity {
   display: flex;
   width: 100%;
-  height: 95%;
+  height: 98%;
 }
 
 .summary_activity > div {
@@ -82,7 +82,7 @@
   height: 1.5rem;
   width: 1.5rem;
   padding: 0.15rem;
-  padding-left: 0.55rem;
+  padding-left: 0.48rem;
   margin-left: 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -93,6 +93,7 @@
   list-style: none;
   padding-left: 0;
   margin-bottom: 0.5rem;
+  border-bottom: 0.5px solid grey;
 }
 
 .activity_item > * {
@@ -125,7 +126,7 @@
   position: relative;
   top: 0.2rem;
   width: 30%;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .activity_item_amount {
@@ -134,7 +135,7 @@
 }
 
 .activity_item_amount strong {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-right: 0.2rem;
 }
 

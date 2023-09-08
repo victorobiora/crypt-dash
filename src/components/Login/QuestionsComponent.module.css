@@ -11,6 +11,10 @@
     margin: 0 0.5rem;
 
 }
+
+.getFavCoins h2{
+    margin: 0.5rem 0;
+}
  .getFavCoins input {
     margin-right: 0.25rem;
     position: relative;

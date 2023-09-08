@@ -15,7 +15,7 @@ const generalDashBoardInitialState = {
   transfers: [
     {
       mode: "Transfer In",
-      date: " 23 - 4 - 2023",
+      date: "2023-09-03",
       time: "23:04",
       amount: 140,
       id: Math.round(Math.random() * 2000000000),
@@ -23,7 +23,7 @@ const generalDashBoardInitialState = {
     },
     {
       mode: "Transfer Out",
-      date: " 27 - 4 - 2023",
+      date: "2023-09-05",
       time: "08:34",
       amount: 55,
       id: Math.round(Math.random() * 2000000000),

@@ -1,6 +1,6 @@
 .container {
   border-right: 1px solid rgb(197, 197, 197);
-  width: 68.5%;
+  width: 73.5%;
   padding: 1.5rem;
 }
 
@@ -32,7 +32,7 @@
 .greeting strong {
   position: relative;
   top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-left: 0.5rem;
 }
 
@@ -45,7 +45,7 @@
 
 .wallet_detail {
   width: 50%;
-  
+  margin: 0.5rem 0;
 }
 
 .wallet_detail_icon {

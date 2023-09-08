@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import classes from "./FavoritesComponent.module.css";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import LineChart from "../../charts/LineChart";
@@ -10,8 +9,7 @@ const FavoritesComponent = (props) => {
   return (
     <section className={classes.container}>
       <div className={classes.favorites_heading}>
-        <h4>Favorites</h4>
-        <Link href="/">See all</Link>
+        <h5>Favorites</h5>
       </div>
       <ul className={classes.favorites_container}>
         {favCoins.map((item) => (
@@ -22,8 +20,8 @@ const FavoritesComponent = (props) => {
                 </div>
       
               <div className={classes.favorites_item_name}>
-                <h3>{item.name}</h3>
-                <h4>{item.symbol}</h4>
+                <h4>{item.name}</h4>
+                <h5>{item.symbol}</h5>
               </div>
             </div>
 
@@ -31,8 +29,8 @@ const FavoritesComponent = (props) => {
             <LineChart chartData={item.chartData} colorCheck={false}/>
             </div>
             <div>
-              <h3 className={classes.price}>${item.price}</h3>
-              <h4 className={classes.percentageDiff}>{item.percentageDifference}%</h4>
+              <h4 className={classes.price}>${item.price}</h4>
+              <h5 className={classes.percentageDiff}>{item.percentageDifference}%</h5>
             </div>
           </li>
         ))}

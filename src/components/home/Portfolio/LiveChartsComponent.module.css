@@ -13,17 +13,20 @@
 .liveCharts_heading {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 
-.liveCharts_heading h4 {
+.liveCharts_heading h5 {
   color: rgb(8, 8, 173);
 }
 
 .live_item {
-  margin: 0.4rem;
+  margin: 0.5rem;
+  margin-top: 0.7rem;
   padding-right: 1rem;
   width: 100%;
   justify-content: space-between;
+
 }
 
 .live_item,

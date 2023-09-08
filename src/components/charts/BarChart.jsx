@@ -34,6 +34,7 @@ const BarChart = (props) => {
 
   const options = {
     responsive: true,
+   
     maintainAspectRatio: false,
     scales: {
       x: {
@@ -59,8 +60,9 @@ const BarChart = (props) => {
     datasets: [
       {
         backgroundColor: chartColors,
-        maxBarThickness: 20,
+        maxBarThickness: 15,
         borderWidth: 0.5,
+        borderRadius: 12,
         data: transferList.map(el => el.amount),
       },
     ],

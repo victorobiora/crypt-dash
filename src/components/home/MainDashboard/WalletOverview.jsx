@@ -23,7 +23,7 @@ console.log(inComeDetails)
         <WalletDetail
           svg={svgObject.chartUp}
           bColor="rgb(151, 202, 151)"
-          text="Total Earnings"
+          text="Monthly Earnings"
           amount={inComeDetails.monthlyIncome.toFixed(2)}
         />
         <WalletDetail
@@ -35,13 +35,13 @@ console.log(inComeDetails)
         <WalletDetail
           svg={svgObject.chartDown}
           bColor="rgb(241, 170, 130)"
-          text="Total Spendings"
+          text="Monthly Expenses"
           amount={inComeDetails.monthlyExpense.toFixed(2)}
         />
         <WalletDetail
           svg={svgObject.spending}
           bColor="rgb(176, 176, 255)"
-          text="Spending Goals"
+          text="Spending Goal for the month"
           amount={inComeDetails.expenseTarget.toFixed(2)}
         />
       </section>

@@ -11,7 +11,7 @@ const walletDetail = (props) => {
       </div>
       <div className={styles.wallet_detail_item}>
         <p className={styles.detail_item_heading}>{props.text}</p>
-        <h1>${props.amount}</h1>
+        <h3>${props.amount}</h3>
       </div>
     </div>
   );

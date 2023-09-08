@@ -15,7 +15,7 @@ const ActivityItem = ({ item }) => {
     <ul className={classes.activity_item} key={item.id}>
       <li className={classes.activity_item_icon}>{svgObject.shop}</li>
       <li className={classes.activity_item_description}>
-        <h3>{item.mode}</h3>
+        <h4>{item.mode}</h4>
         <p>{item.date}</p>
       </li>
       <li className={classes.activity_item_icon}>
@@ -24,7 +24,7 @@ const ActivityItem = ({ item }) => {
       <li className={classes.activity_detail}>{item.detail}</li>
       <li className={classes.activity_item_icon}>{svgObject.coins}</li>
       <li className={classes.activity_item_amount}>
-        <strong>$</strong> {item.mode === "Transfer Out" ? '-' : "+"}{" "}
+        <strong>$</strong>
         {item.amount.toFixed(2)}
       </li>
       <button className={classes.removeItem_button} onClick={removeItemHandler}>
