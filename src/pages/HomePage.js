@@ -116,7 +116,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-export const homePageLoader = () => {
-  return null;
-};

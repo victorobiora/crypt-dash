@@ -1,0 +1,81 @@
+.container {
+  padding: 1rem;
+}
+
+.homeHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeHeading h1 {
+  margin-left: 1rem;
+  font-style: italic;
+}
+
+.homeSvg {
+  height: 7rem;
+  width: 3rem;
+}
+
+.chartItemHeading1 {
+  border-top: 0.75px solid rgb(197, 197, 197);
+}
+
+.chartItemHeading1,
+.chartItemHeading2 {
+  padding: 1rem 0;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  border-bottom: 0.75px solid rgb(197, 197, 197);
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+
+.chartItemHeading1 li,
+.chartItemHeading2 li {
+  width: 10%;
+}
+
+.chartNumber {
+  width: 1% !important;
+}
+
+.chartCoin {
+  width: 30% !important;
+}
+
+.chartItemHeading1 .chartCoin {
+  padding-left: 2rem;
+}
+
+.coin_name {
+  display: flex;
+}
+
+.coin_name_and_symbol {
+  display: flex;
+  position: relative;
+  top: 0.1rem;
+}
+
+.coin_name_and_symbol h5 {
+  margin-left: 0.5rem;
+  color: rgb(130, 127, 127);
+  position: relative;
+  top: 0.2rem;
+}
+
+.coin_picture {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  color: rgb(252, 227, 85, 0.7);
+}
+
+.coin_picture img {
+  height: 100%;
+  width: 100%;
+}

@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import { homePageLoader } from "./pages/HomePage";
+import ChartsPage from "./pages/ChartsPage";
+import { ChartsLoader } from "./pages/ChartsPage";
 import RootLayout from "./pages/RootLayOut";
 import LogInPage from "./pages/logInPage";
 import { Provider } from "react-redux";
@@ -18,8 +19,11 @@ function App() {
     {
       path: "/home",
       element: <RootLayout />,
-      children: [{ path: "", element: <HomePage /> }],
-      loader: homePageLoader,
+      children: [
+        { path: "", element: <HomePage /> },
+        { path: "charts", element: <ChartsPage />, loader: ChartsLoader},
+      ],
+
     },
   ]);
   return (

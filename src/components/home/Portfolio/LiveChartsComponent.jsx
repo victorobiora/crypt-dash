@@ -14,7 +14,7 @@ const LiveChartsComponent = (props) => {
     <section className={classes.container}>
       <div className={classes.liveCharts_heading}>
         <h5> Live Charts </h5>
-        <Link href="/">See all</Link>
+        <Link to="charts">See all</Link>
       </div>
       <ul className={classes.liveCharts_container}>
         {displayedLiveCoins.map((item) => (
