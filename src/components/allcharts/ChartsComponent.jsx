@@ -1,6 +1,7 @@
 import classes from "./ChartsComponent.module.css";
 import ChartItem from "./ChartItem";
 import { svgObject } from "../../svg";
+import { Link } from "react-router-dom";
 
 const ChartsComponent = ({chartsArrray}) => {
 
@@ -12,6 +13,7 @@ const ChartsComponent = ({chartsArrray}) => {
                 {svgObject.homeLink}
             </div>
             <h1>Crypt Dash</h1>
+            <Link to='/home'> Go Back</Link>
         </div>
       <main>
         <ul className={classes.chartItemHeading1}>

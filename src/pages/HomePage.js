@@ -14,7 +14,7 @@ const HomePage = () => {
   useEffect(() => {
     const getCoinsData = async () => {
       const pickedCoinsArray = formData.pickedCoins;
-      console.log(pickedCoinsArray);
+
       //Here, i get the data for picked coins including symbol name and chart data
       //i then push it to my store to be used by chart.js
       try {
@@ -42,7 +42,8 @@ const HomePage = () => {
               symbol: getItemData.symbol.toUpperCase(),
               image: getItemData.image,
               price: getItemData.market_data.current_price.usd,
-              percentageDifference: getItemData.market_data.price_change_percentage_24h,
+              percentageDifference:
+                getItemData.market_data.price_change_percentage_24h,
               chartData: getChartData.prices,
               everything: getItemData,
             };
@@ -50,7 +51,13 @@ const HomePage = () => {
         );
 
         const getLiveChartsData = await fetch(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false&locale=en"
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false&locale=en",
+          {
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
         );
         const response = await getLiveChartsData.json();
         console.log(response);
@@ -60,6 +67,7 @@ const HomePage = () => {
             const liveChartResponseCall = await fetch(
               `https://api.coingecko.com/api/v3/coins/${el.id}/market_chart?vs_currency=usd&days=7&interval=daily`,
               {
+                mode: "no-cors",
                 headers: {
                   "Content-Type": "application/json",
                 },
@@ -85,7 +93,7 @@ const HomePage = () => {
           })
         );
       } catch (err) {
-        console.log(err);
+        console.log('err')
       }
       //remove loading state
       setIsDataBack(true);
