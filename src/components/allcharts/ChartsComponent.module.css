@@ -23,12 +23,12 @@
   border-radius: 0.5rem;
   position: absolute;
   right: 0;
-  padding: 0.3rem;
+  padding: 0.3rem 0.5rem;
   height: 2rem;
-  width: 4rem;
-  color: whitesmoke;
-  background-color: rgb(8, 8, 173) ;
+  color: white;
+  background-color: #002967;
   border-color: transparent;
+  text-decoration: none;
 
 }
 

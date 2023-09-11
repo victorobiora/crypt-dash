@@ -13,7 +13,7 @@ const ChartsComponent = ({chartsArrray}) => {
                 {svgObject.homeLink}
             </div>
             <h1>Crypt Dash</h1>
-            <Link to='/home'> Go Back</Link>
+            <Link to='/home'>{`<< `}Go Back</Link>
         </div>
       <main>
         <ul className={classes.chartItemHeading1}>
