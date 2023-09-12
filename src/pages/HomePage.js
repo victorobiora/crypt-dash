@@ -9,7 +9,7 @@ import { useDispatch } from "react-redux";
 const HomePage = () => {
   const [isDataBack, setIsDataBack] = useState(false);
   const dispatch = useDispatch();
-  const formData = useSelector((state) => state.dashBoardDetails);
+  const formData = useSelector((state) => state.generalDashBoard.dashBoardDetails);
 
   useEffect(() => {
     const getCoinsData = async () => {

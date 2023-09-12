@@ -22,7 +22,7 @@ ChartJS.register(
 );
 
 const BarChart = (props) => {
-  const transferList = useSelector((state) => state.transfers);
+  const transferList = useSelector((state) => state.generalDashBoard.transfers);
   
   const chartColors = transferList.map((el) => {
     if (el.mode === "Transfer In") {

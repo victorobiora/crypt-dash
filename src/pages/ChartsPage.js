@@ -2,24 +2,27 @@ import { useLoaderData } from "react-router-dom";
 import ChartsComponent from "../components/allcharts/ChartsComponent";
 import { useNavigate } from "react-router-dom";
 import { Fragment, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { chartActions } from "../store/cryptStore";
 
 const ChartsPage = () => {
+  const selectedPage = useSelector(state => state.chartState.selectedPageData)
+  const dispatch = useDispatch()
   const data = useLoaderData();
-  console.log(data)
   const [showChart, setShowChart] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (data.errorMessage) {
-      console.log("vjgdhjf");
       navigate("/");
     } else {
+      dispatch(chartActions.addTotalCharts(data))
       setShowChart(true);
     }
-  }, [data.errorMessage, navigate]);
+  }, [data.errorMessage, navigate, data, dispatch]);
 
   return (
-    <Fragment>{showChart && <ChartsComponent chartsArrray={data} />};</Fragment>
+    <Fragment>{showChart && <ChartsComponent chartsArrray={selectedPage} />}</Fragment>
   );
 };
 

@@ -1,6 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { configureStore } from "@reduxjs/toolkit";
 
+
+const pagination = (array) => {
+  const pageOne = array.slice(0, 20);
+  const pageTwo = array.slice(20, 40);
+  const pageThree = array.slice(40, 60);
+  const pageFour = array.slice(60, 80);
+  const pageFive = array.slice(80);
+
+  return [pageOne, pageTwo, pageThree, pageFour, pageFive];
+};
+
+const chartsInitialState = {
+  genCharts: [],
+  selectedPageData: []
+}
+
 const generalDashBoardInitialState = {
   dashBoardDetails: {
     name: "Kanonas",
@@ -63,10 +79,26 @@ const generalDashBoard = createSlice({
   },
 });
 
+const generalCharts = createSlice({
+  name: 'chartState',
+  initialState: chartsInitialState,
+  reducers: {
+    addTotalCharts(state, action) {
+    const newArray =  pagination(action.payload)
+    state.selectedPageData = newArray[0]
+      state.genCharts = newArray
+    }
+  }
+})
+
 export const dashActions = generalDashBoard.actions;
+export const chartActions = generalCharts.actions;
 
 const store = configureStore({
-  reducer: generalDashBoard.reducer,
+  reducer: {
+   'generalDashBoard' : generalDashBoard.reducer,
+   'chartState' : generalCharts.reducer
+  }
 });
 
 export default store;

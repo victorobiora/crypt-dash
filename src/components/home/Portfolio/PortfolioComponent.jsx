@@ -5,8 +5,8 @@ import LiveChartsComponent from "./LiveChartsComponent";
 import { useSelector } from "react-redux";
 
 const PortfolioComponent = (props) => {
-  const userDetails = useSelector(state => state.dashBoardDetails)
-  const portfolioBalance = useSelector(state => state.portfolioBalance)
+  const userDetails = useSelector(state => state.generalDashBoard.dashBoardDetails)
+  const portfolioBalance = useSelector(state => state.generalDashBoard.portfolioBalance)
   return (
     <section className={classes.portfolio_container}>
       <div className={classes.portfolio_heading}>

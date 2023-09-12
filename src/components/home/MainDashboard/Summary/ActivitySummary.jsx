@@ -7,8 +7,8 @@ import BarChart from "../../../charts/BarChart";
 
 const ActivitySummary = (props) => {
   const [showForm, setShowForm] = useState(false);
-  const transfersList = useSelector((state) => state.transfers);
-  const portfolioAmount = useSelector((state) => state.portfolioBalance);
+  const transfersList = useSelector((state) => state.generalDashBoard.transfers);
+  const portfolioAmount = useSelector((state) => state.generalDashBoard.portfolioBalance);
 
   const showFormDisplay = () => {
     setShowForm(true);

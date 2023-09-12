@@ -4,7 +4,7 @@ import { svgObject } from "../../../svg";
 import { useSelector } from "react-redux";
 
 const WalletOverview = (props) => {
-const inComeDetails = useSelector(state => state.dashBoardDetails)
+const inComeDetails = useSelector(state => state.generalDashBoard.dashBoardDetails)
 console.log(inComeDetails)
 
   const imgLink =

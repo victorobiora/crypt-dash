@@ -25,7 +25,7 @@ const ChartsComponent = ({chartsArrray}) => {
           <li><h4>market cap</h4></li>
         </ul>
         {chartsArrray.map(chartsArrrayData => (
-            <ChartItem item={chartsArrrayData}/>
+            <ChartItem key={chartsArrrayData.ath} item={chartsArrrayData}/>
         ))}
       </main>
     </section>

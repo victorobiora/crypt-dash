@@ -3,7 +3,7 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import LineChart from "../../charts/LineChart";
 
 const FavoritesComponent = (props) => {
-  const favCoins = useSelector(state => state.favCoins)
+  const favCoins = useSelector(state => state.generalDashBoard.favCoins)
   console.log(favCoins)
   
   return (
