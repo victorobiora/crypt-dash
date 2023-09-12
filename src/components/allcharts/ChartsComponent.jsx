@@ -28,6 +28,15 @@ const ChartsComponent = ({chartsArrray}) => {
             <ChartItem key={chartsArrrayData.ath} item={chartsArrrayData}/>
         ))}
       </main>
+      <main className={classes.paginationSection}>
+        <div className={classes.currentPage}>
+          <h2>1</h2>
+        </div>
+        <div className={classes.paginationButtons}>
+          <button> Previous</button>
+          <button> Next </button>
+        </div>
+      </main>
     </section>
   );
 };
