@@ -14,7 +14,8 @@ const pagination = (array) => {
 
 const chartsInitialState = {
   genCharts: [],
-  selectedPageData: []
+  selectedPageData: [],
+  selectedIndex: 0
 }
 
 const generalDashBoardInitialState = {
@@ -85,8 +86,17 @@ const generalCharts = createSlice({
   reducers: {
     addTotalCharts(state, action) {
     const newArray =  pagination(action.payload)
-    state.selectedPageData = newArray[0]
+    state.selectedPageData = newArray[state.selectedIndex]
       state.genCharts = newArray
+    },
+    updateSelectedPageData: (state, action) => {
+      if(action.payload === 'add'){
+        state.selectedIndex = state.selectedIndex + 1     
+        state.selectedPageData = state.genCharts[state.selectedIndex] 
+      }else{
+        state.selectedIndex = state.selectedIndex - 1     
+        state.selectedPageData = state.genCharts[state.selectedIndex]
+      }
     }
   }
 })

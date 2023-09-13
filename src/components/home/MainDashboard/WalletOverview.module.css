@@ -2,6 +2,7 @@
   border-right: 1px solid rgb(197, 197, 197);
   width: 73.5%;
   padding: 1.5rem;
+  animation: clarity 1.5s;
 }
 
 .walletContainer {
@@ -77,4 +78,14 @@
 
 .detail_item_heading {
   color: rgb(160, 160, 160);
+}
+
+
+@keyframes clarity {
+  0%{
+    opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  }
 }

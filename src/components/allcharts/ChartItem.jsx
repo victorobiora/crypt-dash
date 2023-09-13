@@ -15,10 +15,10 @@ const ChartItem = ({item}) => {
           </div>
         </div>
       </li>
-      <li>$ {item.current_price}</li>
-      <li>{item.price_change_percentage_24h}%</li>
-      <li>$ {item.ath}</li>
-      <li>${item.market_cap}</li>
+      <li className={classes.itemPrice}>$ {item.current_price}</li>
+      <li>{item.price_change_percentage_24h.toFixed(3)}%</li>
+      <li className={classes.phoneScreenHide}>$ {item.ath}</li>
+      <li className={classes.phoneScreenHide}>${item.market_cap}</li>
     </ul>
   );
 };

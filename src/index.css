@@ -1,20 +1,24 @@
 @font-face {
   font-family: Teko-Regular;
-  src: url('./fonts/Teko-Regular.ttf');
+  src: url("./fonts/Teko-Regular.ttf");
 }
 
-@font-face{
+@font-face {
   font-family: Product-sans;
-  src: url('./fonts/ProductSans-Light.ttf')
+  src: url("./fonts/ProductSans-Light.ttf");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   height: 100vh;
   margin: 0;
-  font-family: Product-sans, 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    font-size: 0.9rem;
+  font-family: Product-sans, "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,7 +29,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
