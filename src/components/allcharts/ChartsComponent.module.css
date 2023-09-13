@@ -4,7 +4,8 @@
 
 .homeHeading {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
   align-items: center;
   position: relative;
 }
@@ -29,6 +30,7 @@
   background-color: #002967;
   border-color: transparent;
   text-decoration: none;
+  margin-right: 2rem;
 }
 
 .mainChart ul:not(:first-child) {
@@ -130,6 +132,13 @@
 }
 
 @media screen and (max-width: 450px) {
+  .container {
+    padding: 0;
+  }
+
+  .coin_picture{
+    min-width: 20%;
+  }
   .phoneScreenHide {
     display: none;
   }
@@ -137,12 +146,11 @@
     width: 30% !important;
     text-align: center;
   }
-  .chartItemHeading1 .chartCoin  {
+  .chartItemHeading1 .chartCoin {
     padding-left: 0;
   }
   .chartItemHeading1 {
     justify-content: space-between;
     padding: 1rem 1.3rem;
   }
-
 }

@@ -25,7 +25,7 @@ const ChartsComponent = ({chartsArrray}) => {
             <div className={classes.homeSvg}>
                 {svgObject.homeLink}
             </div>
-            <h1>Crypt Dash</h1>
+            <div> <h1>Crypt Dash</h1> </div>         
             <Link to='/home'>Home</Link>
         </div>
       <main className={classes.mainChart}>
