@@ -38,10 +38,10 @@
 }
 
 .overview {
-  height: 80%;
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .wallet_detail {
@@ -88,4 +88,15 @@
   100% {
    opacity: 1;
   }
+}
+
+@media screen and (max-width: 450px) {
+  .wallet_detail_icon{
+    margin: 0 0.5rem;
+    width: 2.2rem;
+  } 
+  
+.walletContainer {
+  height: 30%;
+}
 }

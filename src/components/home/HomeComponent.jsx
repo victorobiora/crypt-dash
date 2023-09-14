@@ -4,7 +4,7 @@ import PortfolioComponent from "./Portfolio/PortfolioComponent";
 
 const HomeComponent = (props) => {
   return (
-    <section className="new_Page" style={{display: 'flex', flexDirection: 'row'}}>
+    <section className="new_page_flex" >
       <SideNav />
       <MainDashboard/>
       <PortfolioComponent/>

@@ -43,7 +43,14 @@
   box-sizing: border-box;
 }
 
-.new_Page {
+.new_page_flex {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.new_Page, .new_page_flex {
   height: 100%;
   width: 100%;
 
@@ -69,4 +76,15 @@
   font-style: italic;
   position: relative;
   right: 5%;
+}
+
+@media screen and (max-width: 450px) {
+  .new_page_flex {
+    flex-direction: column;
+  }
+
+  
+  .new_page_flex > section {
+    width: 100%;
+  }
 }

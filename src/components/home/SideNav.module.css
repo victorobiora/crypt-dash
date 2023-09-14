@@ -28,3 +28,16 @@
     display: inline-block;
 };
 
+@media screen and (max-width: 450px){
+  .sideNav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sideNav {
+ 
+    display: none;
+  }
+
+}

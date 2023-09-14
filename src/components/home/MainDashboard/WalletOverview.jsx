@@ -16,7 +16,7 @@ console.log(inComeDetails)
           <div>
             <img src={imgLink} alt="profile-pic" />
           </div>
-          <strong>Good Morning, {inComeDetails.name}!</strong>
+          <strong>Good Day, {inComeDetails.name}!</strong>
         </div>
       </div>
       <section className={styles.overview}>
@@ -29,7 +29,7 @@ console.log(inComeDetails)
         <WalletDetail
           svg={svgObject.shop}
           bColor="rgb(197, 197, 197)"
-          text="Goal for the Month"
+          text="Earnings Goal"
           amount={inComeDetails.incomeTarget.toFixed(2)}
         />
         <WalletDetail
@@ -41,7 +41,7 @@ console.log(inComeDetails)
         <WalletDetail
           svg={svgObject.spending}
           bColor="rgb(176, 176, 255)"
-          text="Spending Goal for the month"
+          text="Expense Goal"
           amount={inComeDetails.expenseTarget.toFixed(2)}
         />
       </section>

@@ -155,6 +155,17 @@
 
 .activity_item:hover .removeItem_button {
 opacity: 1;
-
 }
 
+@media screen and (max-width: 450px) {
+  .summary_activity {
+    flex-direction: column;
+  }
+  .activity_line_chart{
+    width: 100%;
+  }
+  .activity_history{
+    overflow: unset;
+    margin-bottom: 3rem;
+  }
+}
