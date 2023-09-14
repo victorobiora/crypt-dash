@@ -1,6 +1,5 @@
 .summaryContainer {
     width: 100%;
-    height: 60%;
 }
 
 
@@ -19,4 +18,11 @@
 
 .summaryHeadings div:first-child {
     color: black;
+}
+
+
+@media screen and (min-width: 450px) {
+    .summaryContainer {
+        height: 57%;
+    }
 }
