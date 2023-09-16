@@ -17,6 +17,8 @@ const ActivitySummary = (props) => {
     setShowForm((prevState) => !prevState);
   };
 
+  console.log(transfersList)
+
   return (
     <section className={classes.summary_activity}>
       <div className={classes.activity_line_chart}>
