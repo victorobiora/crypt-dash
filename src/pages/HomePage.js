@@ -17,6 +17,8 @@ const HomePage = () => {
 
       //Here, i get the data for picked coins including symbol name and chart data
       //i then push it to my store to be used by chart.js
+
+
       try {
         const newFavCoinsArray = await Promise.all(
           pickedCoinsArray.map(async (el) => {
@@ -43,7 +45,7 @@ const HomePage = () => {
               image: getItemData.image,
               price: getItemData.market_data.current_price.usd,
               percentageDifference:
-                getItemData.market_data.price_change_percentage_24h,
+              getItemData.market_data.price_change_percentage_24h,
               chartData: getChartData.prices,
               everything: getItemData,
             };
