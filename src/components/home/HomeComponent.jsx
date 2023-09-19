@@ -7,9 +7,11 @@ const HomeComponent = (props) => {
     <section className="new_page_flex" >
       <SideNav />
       <MainDashboard/>
-      <PortfolioComponent/>
+     <PortfolioComponent/>
     </section>
   );
 };
+
+
 
 export default HomeComponent;

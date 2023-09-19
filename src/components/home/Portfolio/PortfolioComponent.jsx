@@ -28,9 +28,9 @@ const PortfolioComponent = (props) => {
         </div>
       </div>
       <FavoritesComponent/>
-      <LiveChartsComponent/>
+
     </section>
   );
 };
-
+   //   <LiveChartsComponent/>
 export default PortfolioComponent;

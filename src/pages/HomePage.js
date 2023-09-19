@@ -9,7 +9,9 @@ import { useDispatch } from "react-redux";
 const HomePage = () => {
   const [isDataBack, setIsDataBack] = useState(false);
   const dispatch = useDispatch();
-  const formData = useSelector((state) => state.generalDashBoard.dashBoardDetails);
+  const formData = useSelector(
+    (state) => state.generalDashBoard.dashBoardDetails
+  );
 
   useEffect(() => {
     const getCoinsData = async () => {
@@ -17,7 +19,6 @@ const HomePage = () => {
 
       //Here, i get the data for picked coins including symbol name and chart data
       //i then push it to my store to be used by chart.js
-
 
       try {
         const newFavCoinsArray = await Promise.all(
@@ -44,8 +45,7 @@ const HomePage = () => {
               symbol: getItemData.symbol.toUpperCase(),
               image: getItemData.image,
               price: getItemData.market_data.current_price.usd,
-              percentageDifference:
-              getItemData.market_data.price_change_percentage_24h,
+              percentageDifference: getItemData.market_data.price_change_percentage_24h,
               chartData: getChartData.prices,
               everything: getItemData,
             };
@@ -62,7 +62,7 @@ const HomePage = () => {
         );
         const response = await getLiveChartsData.json();
         console.log(response);
-
+/*
         const finalLiveChartData = await Promise.all(
           response.map(async (el) => {
             const liveChartResponseCall = await fetch(
@@ -70,7 +70,7 @@ const HomePage = () => {
               {
                 headers: {
                   "Content-Type": "application/json",
-                }
+                },
               }
             );
             const responseB = await liveChartResponseCall.json();
@@ -84,16 +84,16 @@ const HomePage = () => {
               ...responseB,
             };
           })
-        );
+        );*/
         //Then update the store with both the favorite coins and live chart coins for chartJs to use the datapoints
         dispatch(
           dashActions.addRequestedCoins({
             newFavCoinsArray,
-            finalLiveChartData,
+        //    finalLiveChartData,
           })
         );
       } catch (err) {
-        console.log('err')
+        console.log("err");
       }
       //remove loading state
       setIsDataBack(true);
