@@ -60,7 +60,7 @@ const generalDashBoard = createSlice({
     },
     addRequestedCoins(state, action) {
       state.favCoins = action.payload.newFavCoinsArray;
-    //  state.liveChartCoins = action.payload.finalLiveChartData;
+      state.liveChartCoins = action.payload.finalLiveChartData;
     },
     addToTransferList(state, action) {
       state.transfers.push(action.payload);

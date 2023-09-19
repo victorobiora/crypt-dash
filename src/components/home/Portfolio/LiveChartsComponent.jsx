@@ -7,7 +7,7 @@ const LiveChartsComponent = (props) => {
 
   const liveCoinsArray = useSelector(state => state.generalDashBoard.liveChartCoins);
   
-  const displayedLiveCoins = liveCoinsArray.slice(0, 4);
+  const displayedLiveCoins = liveCoinsArray.slice(0, 3);
   console.log(displayedLiveCoins)
 
   return (

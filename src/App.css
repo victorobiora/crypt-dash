@@ -58,24 +58,27 @@
 
 .spinner {
   height: 10%;
-  width: 8%;
+  width: 100%;
   position: relative;
   top: 25%;
-  left: 40%;
+  text-align: center;
 }
 
-.spinner svg {
-  position: relative;
-  left: 40%;
+.spin_container {
+   width: 100%;
+   padding-left: 48%;
+}
+
+.spin_container svg {
+  width: 10%;
 }
 
 .please-wait-text{
-  width: 20rem;
   margin-top: 2rem;
   font-size: 1.1rem;
   font-style: italic;
-  position: relative;
-  right: 5%;
+  text-align: center;
+ 
 }
 
 @media screen and (max-width: 450px) {

@@ -45,7 +45,8 @@ const HomePage = () => {
               symbol: getItemData.symbol.toUpperCase(),
               image: getItemData.image,
               price: getItemData.market_data.current_price.usd,
-              percentageDifference: getItemData.market_data.price_change_percentage_24h,
+              percentageDifference:
+                getItemData.market_data.price_change_percentage_24h,
               chartData: getChartData.prices,
               everything: getItemData,
             };
@@ -53,7 +54,7 @@ const HomePage = () => {
         );
 
         const getLiveChartsData = await fetch(
-          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=5&page=1&sparkline=false&locale=en",
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=3&page=1&sparkline=false&locale=en",
           {
             headers: {
               "Content-Type": "application/json",
@@ -62,7 +63,7 @@ const HomePage = () => {
         );
         const response = await getLiveChartsData.json();
         console.log(response);
-/*
+
         const finalLiveChartData = await Promise.all(
           response.map(async (el) => {
             const liveChartResponseCall = await fetch(
@@ -74,6 +75,7 @@ const HomePage = () => {
               }
             );
             const responseB = await liveChartResponseCall.json();
+            console.log(responseB);
 
             return {
               name: el.name,
@@ -84,12 +86,13 @@ const HomePage = () => {
               ...responseB,
             };
           })
-        );*/
+        );
+        console.log(finalLiveChartData);
         //Then update the store with both the favorite coins and live chart coins for chartJs to use the datapoints
         dispatch(
           dashActions.addRequestedCoins({
             newFavCoinsArray,
-        //    finalLiveChartData,
+            finalLiveChartData,
           })
         );
       } catch (err) {
@@ -106,12 +109,15 @@ const HomePage = () => {
     <Fragment>
       {!isDataBack && (
         <section className="spinner">
-          <TailSpin
-            color="#0047AB"
-            ariaLabel="tail-spin-loading"
-            radius="1"
-            visible={true}
-          />
+          <div className="spin_container">
+            <TailSpin
+              color="#0047AB"
+              ariaLabel="tail-spin-loading"
+              radius="1"
+              visible={true}
+            />
+          </div>
+
           <div className="please-wait-text">
             Please hold on while we get your data...
           </div>

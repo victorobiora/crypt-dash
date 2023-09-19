@@ -15,7 +15,7 @@
   border-radius: 0.56rem;
   padding: 1rem;
   position: fixed;
-  left: 34%;
+  left: 38%;
   top: 10rem;
   z-index: 125;
 }
@@ -63,4 +63,10 @@
 
 .errorText {
   color: rgb(255, 45, 45);
+}
+
+@media screen and (max-width: 450px) {
+  .container form {
+    left: 10%;
+  } 
 }
