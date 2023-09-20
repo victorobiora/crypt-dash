@@ -4,6 +4,7 @@ const RootLayout = (props) => {
   return (
     <main className="new_Page">
       <Outlet />
+      <div>hi I'm here</div>
     </main>
   )
 }
