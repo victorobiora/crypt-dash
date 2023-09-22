@@ -110,6 +110,7 @@ const HomePage = () => {
 
   return (
     <Fragment>
+
       {!isDataBack || navigation.state === 'loading' ? (
         <section className="spinner">
           <div className="spin_container">

@@ -1,0 +1,80 @@
+
+.containerI {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.containerII {
+  display: flex;
+  width: 7rem;
+}
+
+.day,
+.night {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.day {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.night{
+    margin-top: 0.2rem;
+}
+
+.mode_switch {
+  height: 1.2rem;
+  margin-right: 0.2rem;
+  width: 2.8rem;
+  border: 2px solid black;
+  border-radius: 0.56rem;
+  margin-top: 2px;
+  position: relative;
+}
+
+.mode_switch_ball {
+  position: absolute;
+  height: 100%;
+  width: 1rem;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: black;
+}
+
+.mode_switch_ball_night {
+  right: 0;
+  animation: switch-to-night 0.5s linear;
+}
+
+.mode_switch_ball_day {
+  animation: switch-to-day 0.5s linear;
+}
+
+
+@keyframes switch-to-day {
+  from {
+    right: 0;
+  }
+  to {
+    right: 66%;
+  }
+}
+
+@keyframes switch-to-night {
+  from {
+    left: 0;
+  }
+  to {
+    left: 66%;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+    .containerI {
+        justify-content: center;
+        margin: 0.5rem 0;
+    }
+  }

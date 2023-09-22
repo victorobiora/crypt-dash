@@ -1,3 +1,36 @@
+const moonSvg = (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1">
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+      <g
+        id="Dribbble-Light-Preview"
+        transform="translate(-260.000000, -2599.000000)"
+        fill="#000000"
+      >
+        <g id="icons" transform="translate(56.000000, 160.000000)">
+          <path
+            d="M213.978454,2456.99569 C210.914867,2456.99569 208.250138,2455.26697 206.900236,2452.73453 C213.101568,2453.26066 218.261663,2448.1176 217.735531,2441.90024 C220.266974,2443.25014 221.995691,2445.91487 221.995691,2448.97845 C221.995691,2453.39896 218.398958,2456.99569 213.978454,2456.99569 M214.834294,2439 C218.520218,2445.91687 210.972992,2453.55028 204,2449.83429 C204.429924,2454.90419 208.683069,2459 213.978454,2459 C219.513354,2459 224,2454.51335 224,2448.97845 C224,2443.68006 219.901188,2439.42992 214.834294,2439"
+            id="moon-[#1247]"
+          ></path>
+        </g>
+      </g>
+    </g>
+  </svg>
+);
+
+const sunLightSvg = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="#000000"
+    width="800px"
+    height="800px"
+    viewBox="0 0 24 24"
+    id="sunlight"
+    class="icon glyph"
+  >
+    <path d="M21,11H17.91a6,6,0,0,0-1-2.47l2.18-2.19a1,1,0,1,0-1.41-1.41L15.47,7.11a6,6,0,0,0-2.47-1V3a1,1,0,0,0-2,0V6.09a6,6,0,0,0-2.47,1L6.34,4.93A1,1,0,0,0,4.93,6.34L7.11,8.53a6,6,0,0,0-1,2.47H3a1,1,0,0,0,0,2H6.09a6,6,0,0,0,1,2.47L4.93,17.66a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l2.19-2.18a6,6,0,0,0,2.47,1V21a1,1,0,0,0,2,0V17.91a6,6,0,0,0,2.47-1l2.19,2.18a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41l-2.18-2.19a6,6,0,0,0,1-2.47H21a1,1,0,0,0,0-2Zm-9,5a4,4,0,1,1,4-4A4,4,0,0,1,12,16Z" />
+  </svg>
+);
+
 const settingsSvg = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
     <circle cx="12" cy="12" r="3" stroke="#d3d3d4" strokeWidth="1.5" />
@@ -180,8 +213,8 @@ const greenIconSvg = (
       strokeLinejoin="round"
     />
     <g id="SVGRepo_iconCarrier">
-      <circle cx="63.93" cy="64" r="60" fill= "rgb(94, 179, 94)" />
-      <circle cx="60.03" cy="63.1" r="56.1" fill= "rgb(94, 179, 94)" />
+      <circle cx="63.93" cy="64" r="60" fill="rgb(94, 179, 94)" />
+      <circle cx="60.03" cy="63.1" r="56.1" fill="rgb(94, 179, 94)" />
       <path
         d="M23.93 29.7c4.5-7.1 14.1-13 24.1-14.8c2.5-.4 5-.6 7.1.2c1.6.6 2.9 2.1 2 3.8c-.7 1.4-2.6 2-4.1 2.5a44.64 44.64 0 0 0-23 17.4c-2 3-5 11.3-8.7 9.2c-3.9-2.3-3.1-9.5 2.6-18.3z"
         fill="#aed581"
@@ -218,10 +251,7 @@ const depositSvg = (
 );
 
 const withdrawSvg = (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-  >
+  <svg viewBox="0 0 24 24" fill="none">
     <path
       d="M12 9C11.4477 9 11 9.44771 11 10V15.5856L9.70711 14.2928C9.3166 13.9024 8.68343 13.9024 8.29292 14.2928C7.90236 14.6834 7.90236 15.3165 8.29292 15.7071L11.292 18.7063C11.6823 19.0965 12.3149 19.0968 12.7055 18.707L15.705 15.7137C16.0955 15.3233 16.0955 14.69 15.705 14.2996C15.3145 13.909 14.6814 13.909 14.2908 14.2996L13 15.5903V10C13 9.44771 12.5523 9 12 9Z"
       fill="#0F0F0F"
@@ -236,6 +266,8 @@ const withdrawSvg = (
 );
 
 export const svgObject = {
+  sunlight: sunLightSvg,
+  moon: moonSvg,
   homeIcon: homeIconSvg,
   homeLink: homeLinkSvg,
   settings: settingsSvg,
@@ -249,5 +281,5 @@ export const svgObject = {
   greenIcon: greenIconSvg,
   coins: coinsSvg,
   deposit: depositSvg,
-  withdraw: withdrawSvg
+  withdraw: withdrawSvg,
 };
