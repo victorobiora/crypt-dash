@@ -77,4 +77,8 @@
         justify-content: center;
         margin: 0.5rem 0;
     }
+
+    .mode_switch {
+        width: 4rem;
+    }
   }
