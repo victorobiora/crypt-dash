@@ -1,10 +1,11 @@
-const moonSvg = (
+const moonSvg = (color) => {
+  return (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1">
     <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g
         id="Dribbble-Light-Preview"
         transform="translate(-260.000000, -2599.000000)"
-        fill="#000000"
+        fill= {color}
       >
         <g id="icons" transform="translate(56.000000, 160.000000)">
           <path
@@ -15,21 +16,21 @@ const moonSvg = (
       </g>
     </g>
   </svg>
-);
+)
+};
 
-const sunLightSvg = (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="#000000"
-    width="800px"
-    height="800px"
-    viewBox="0 0 24 24"
-    id="sunlight"
-    class="icon glyph"
-  >
-    <path d="M21,11H17.91a6,6,0,0,0-1-2.47l2.18-2.19a1,1,0,1,0-1.41-1.41L15.47,7.11a6,6,0,0,0-2.47-1V3a1,1,0,0,0-2,0V6.09a6,6,0,0,0-2.47,1L6.34,4.93A1,1,0,0,0,4.93,6.34L7.11,8.53a6,6,0,0,0-1,2.47H3a1,1,0,0,0,0,2H6.09a6,6,0,0,0,1,2.47L4.93,17.66a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l2.19-2.18a6,6,0,0,0,2.47,1V21a1,1,0,0,0,2,0V17.91a6,6,0,0,0,2.47-1l2.19,2.18a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41l-2.18-2.19a6,6,0,0,0,1-2.47H21a1,1,0,0,0,0-2Zm-9,5a4,4,0,1,1,4-4A4,4,0,0,1,12,16Z" />
-  </svg>
-);
+const sunLightSvg = color => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill={color}
+      viewBox="0 0 24 24"
+      id="sunlight"
+    >
+      <path d="M21,11H17.91a6,6,0,0,0-1-2.47l2.18-2.19a1,1,0,1,0-1.41-1.41L15.47,7.11a6,6,0,0,0-2.47-1V3a1,1,0,0,0-2,0V6.09a6,6,0,0,0-2.47,1L6.34,4.93A1,1,0,0,0,4.93,6.34L7.11,8.53a6,6,0,0,0-1,2.47H3a1,1,0,0,0,0,2H6.09a6,6,0,0,0,1,2.47L4.93,17.66a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l2.19-2.18a6,6,0,0,0,2.47,1V21a1,1,0,0,0,2,0V17.91a6,6,0,0,0,2.47-1l2.19,2.18a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41l-2.18-2.19a6,6,0,0,0,1-2.47H21a1,1,0,0,0,0-2Zm-9,5a4,4,0,1,1,4-4A4,4,0,0,1,12,16Z" />
+    </svg>
+  );
+}
 
 const settingsSvg = (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">

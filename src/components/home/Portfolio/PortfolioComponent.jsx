@@ -6,9 +6,12 @@ import { useSelector } from "react-redux";
 
 const PortfolioComponent = (props) => {
   const userDetails = useSelector(state => state.generalDashBoard.dashBoardDetails)
-  const portfolioBalance = useSelector(state => state.generalDashBoard.portfolioBalance)
+  const portfolioBalance = useSelector(state => state.generalDashBoard.portfolioBalance);
+  const modeIsDay = useSelector(state => state.mode.modeIsDay);
+  const modeClass = modeIsDay ? `dayBackground` : `nightBackground`
+
   return (
-    <section className={classes.portfolio_container}>
+    <section className={classes.portfolio_container} id={modeClass}>
       <div className={classes.portfolio_heading}>
         <h3>{userDetails.name} Crypto</h3>
         <p>Increase your profit</p>

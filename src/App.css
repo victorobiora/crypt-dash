@@ -7,9 +7,7 @@
   pointer-events: none;
 }
 
-
-
-*{
+* {
   margin: 0;
   box-sizing: border-box;
 }
@@ -24,7 +22,19 @@
 .new_Page, .new_page_flex {
   height: 100%;
   width: 100%;
+  overflow: auto;
 
+}
+
+#nightBackground {
+  background-color: black;
+  transition: background-color 0.5s linear;
+  color: whitesmoke;
+}
+
+#dayBackground {
+  background-color: white;
+  transition: background-color 0.5s linear;
 }
 
 .spinner {

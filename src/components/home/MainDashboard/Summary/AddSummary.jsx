@@ -1,11 +1,12 @@
 import classes from "./AddSummary.module.css";
 import { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { dashActions } from "../../../../store/cryptStore";
 
 const AddSummary = ({ setForm }) => {
   const [isFormCorrect, setIsFormCorrect] = useState(null);
   const dispatch = useDispatch();
+  const modeIsDay = useSelector((state) => state.mode.modeIsDay);
 
   const amountRef = useRef();
   const selectRef = useRef();
@@ -47,7 +48,11 @@ const AddSummary = ({ setForm }) => {
   return (
     <section className={classes.container}>
       <div className={classes.backdrop} onClick={removeFormHandler}></div>
-      <form>
+      <form
+        style={{
+          color: modeIsDay ? "" : "black",
+        }}
+      >
         {isFormCorrect === false && (
           <div className={classes.errorText}>
             Please answer all questions...

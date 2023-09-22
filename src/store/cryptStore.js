@@ -12,6 +12,7 @@ const pagination = (array) => {
   return [pageOne, pageTwo, pageThree, pageFour, pageFive];
 };
 
+
 const chartsInitialState = {
   genCharts: [],
   selectedPageData: [],
@@ -101,13 +102,27 @@ const generalCharts = createSlice({
   }
 })
 
+const modeState = createSlice({
+  name: 'mode',
+  initialState: {
+    modeIsDay: true
+  },
+  reducers: {
+    updateMode(state, action) {
+      state.modeIsDay = !state.modeIsDay
+    }
+  }
+})
+
 export const dashActions = generalDashBoard.actions;
 export const chartActions = generalCharts.actions;
+export const modeAction = modeState.actions;
 
 const store = configureStore({
   reducer: {
    'generalDashBoard' : generalDashBoard.reducer,
-   'chartState' : generalCharts.reducer
+   'chartState' : generalCharts.reducer,
+   'mode' : modeState.reducer
   }
 });
 
