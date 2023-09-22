@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import LineChart from "../../charts/LineChart";
 
 const LiveChartsComponent = (props) => {
-
   const liveCoinsArray = useSelector(state => state.generalDashBoard.liveChartCoins);
   
   const displayedLiveCoins = liveCoinsArray.slice(0, 3);

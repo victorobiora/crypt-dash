@@ -5,8 +5,11 @@ import { dashActions } from "../store/cryptStore";
 import { TailSpin } from "react-loader-spinner";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux";
+import { useNavigation } from "react-router-dom";
+
 
 const HomePage = () => {
+  const navigation = useNavigation();
   const [isDataBack, setIsDataBack] = useState(false);
   const dispatch = useDispatch();
   const formData = useSelector(
@@ -107,7 +110,7 @@ const HomePage = () => {
 
   return (
     <Fragment>
-      {!isDataBack && (
+      {!isDataBack || navigation.state === 'loading' ? (
         <section className="spinner">
           <div className="spin_container">
             <TailSpin
@@ -122,9 +125,8 @@ const HomePage = () => {
             Please hold on while we get your data...
           </div>
         </section>
-      )}
+      ) : <HomeComponent/>}
 
-      {isDataBack && <HomeComponent />}
     </Fragment>
   );
 };
