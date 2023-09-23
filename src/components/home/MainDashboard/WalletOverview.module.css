@@ -1,7 +1,7 @@
 .container {
   border-right: 1px solid rgb(197, 197, 197);
   width: 73.5%;
-  padding: 1.5rem;
+  padding: 1rem;
   padding-top: 0.5rem;
   animation: clarity 1.5s;
 }
