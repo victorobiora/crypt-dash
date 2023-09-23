@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { configureStore } from "@reduxjs/toolkit";
 
-
 const pagination = (array) => {
   const pageOne = array.slice(0, 20);
   const pageTwo = array.slice(20, 40);
@@ -12,12 +11,11 @@ const pagination = (array) => {
   return [pageOne, pageTwo, pageThree, pageFour, pageFive];
 };
 
-
 const chartsInitialState = {
   genCharts: [],
   selectedPageData: [],
-  selectedIndex: 0
-}
+  selectedIndex: 0,
+};
 
 const generalDashBoardInitialState = {
   dashBoardDetails: {
@@ -26,6 +24,8 @@ const generalDashBoardInitialState = {
     monthlyExpense: 0,
     incomeTarget: 0,
     expenseTarget: 0,
+    profilePic:
+      "https://t4.ftcdn.net/jpg/01/86/29/31/360_F_186293166_P4yk3uXQBDapbDFlR17ivpM6B1ux0fHG.jpg",
   },
   portfolioBalance: 0,
   favCoins: [],
@@ -82,37 +82,37 @@ const generalDashBoard = createSlice({
 });
 
 const generalCharts = createSlice({
-  name: 'chartState',
+  name: "chartState",
   initialState: chartsInitialState,
   reducers: {
     addTotalCharts(state, action) {
-    const newArray =  pagination(action.payload)
-    state.selectedPageData = newArray[state.selectedIndex]
-      state.genCharts = newArray
+      const newArray = pagination(action.payload);
+      state.selectedPageData = newArray[state.selectedIndex];
+      state.genCharts = newArray;
     },
     updateSelectedPageData: (state, action) => {
-      if(action.payload === 'add'){
-        state.selectedIndex = state.selectedIndex + 1     
-        state.selectedPageData = state.genCharts[state.selectedIndex] 
-      }else{
-        state.selectedIndex = state.selectedIndex - 1     
-        state.selectedPageData = state.genCharts[state.selectedIndex]
+      if (action.payload === "add") {
+        state.selectedIndex = state.selectedIndex + 1;
+        state.selectedPageData = state.genCharts[state.selectedIndex];
+      } else {
+        state.selectedIndex = state.selectedIndex - 1;
+        state.selectedPageData = state.genCharts[state.selectedIndex];
       }
-    }
-  }
-})
+    },
+  },
+});
 
 const modeState = createSlice({
-  name: 'mode',
+  name: "mode",
   initialState: {
-    modeIsDay: true
+    modeIsDay: true,
   },
   reducers: {
     updateMode(state, action) {
-      state.modeIsDay = !state.modeIsDay
-    }
-  }
-})
+      state.modeIsDay = !state.modeIsDay;
+    },
+  },
+});
 
 export const dashActions = generalDashBoard.actions;
 export const chartActions = generalCharts.actions;
@@ -120,10 +120,10 @@ export const modeAction = modeState.actions;
 
 const store = configureStore({
   reducer: {
-   'generalDashBoard' : generalDashBoard.reducer,
-   'chartState' : generalCharts.reducer,
-   'mode' : modeState.reducer
-  }
+    generalDashBoard: generalDashBoard.reducer,
+    chartState: generalCharts.reducer,
+    mode: modeState.reducer,
+  },
 });
 
 export default store;

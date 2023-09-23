@@ -19,6 +19,53 @@ export const GetName = (props) => {
   );
 };
 
+export const GetImage = ({ setFormData }) => {
+  const [image, setImage] = useState();
+  console.log(image);
+
+  useEffect(() => {
+    if (image) {
+      const reader = new FileReader();
+
+      reader.onloadend = () => {
+        setFormData((prevState) => {
+          return {
+            ...prevState,
+            profilePic: reader.result,
+          };
+        });
+      };
+
+      reader.readAsDataURL(image);
+    } else {
+      setFormData((prevState) => {
+        return {
+          ...prevState,
+          profilePic:
+            "https://t4.ftcdn.net/jpg/01/86/29/31/360_F_186293166_P4yk3uXQBDapbDFlR17ivpM6B1ux0fHG.jpg",
+        };
+      });
+    }
+  }, [image, setFormData]);
+
+  return (
+    <div className={classes.getContainer}>
+      <h3>Lastly, Please choose a profile picture</h3>
+      <input
+        className={classes.get_image}
+        type="file"
+        accept="image/*"
+        onChange={(event) => {
+          const file = event.target.files[0];
+          if (file && file.type.substring(0, 5) === "image") {
+            setImage(file);
+          }
+        }}
+      />
+    </div>
+  );
+};
+
 export const GetFavCoins = ({ setFormData }) => {
   const [checkedCoins, setCheckedCoins] = useState([]);
 
@@ -139,7 +186,6 @@ export const GetIncomeGoals = (props) => {
   );
 };
 
-
 export const GetExpense = (props) => {
   return (
     <div className={classes.getContainer}>
@@ -161,11 +207,10 @@ export const GetExpense = (props) => {
   );
 };
 
-
 export const GetExpenseGoals = (props) => {
   return (
     <div className={classes.getContainer}>
-      <h3>Lastly, How much do you intend to spend this month?</h3>
+      <h3>How much do you intend to spend this month?</h3>
       <input
         type="number"
         name="income"

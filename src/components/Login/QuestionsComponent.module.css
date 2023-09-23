@@ -1,24 +1,32 @@
-.getContainer input {
-    height: 2rem;
-    margin-top: 0.3rem;
-    border-radius: 0.6rem;
-    border-color: transparent;
-    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
-    outline-color: transparent;
+.getContainer input:not(.get_image) {
+  height: 2rem;
+  margin-top: 0.3rem;
+  border-radius: 0.6rem;
+  border-color: transparent;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+  outline-color: transparent;
 }
 
-
-
-.getFavCoins label{
-    margin: 0 0.5rem;
-
+.getFavCoins label {
+  margin: 0 0.5rem;
 }
 
-.getFavCoins h2{
-    margin: 0.5rem 0;
+.getFavCoins h2 {
+  margin: 0.5rem 0;
 }
- .getFavCoins input {
-    margin-right: 0.25rem;
-    position: relative;
-    top: 0.1rem;
+.getFavCoins input {
+  margin-right: 0.25rem;
+  position: relative;
+  top: 0.1rem;
+}
+
+.get_image {
+  position: relative;
+  left: 3%;
+}
+
+@media screen and (max-width: 450px) {
+  .get_image {
+    left: 13%;
+  }
 }

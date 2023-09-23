@@ -20,7 +20,7 @@
 }
 
 .greeting div {
-  height: 100%;
+  height: 3.5rem;
   width: 3.5rem;
   margin: 0 0.5rem;
 }
@@ -81,20 +81,18 @@
   color: rgb(160, 160, 160);
 }
 
-
 @keyframes clarity {
-  0%{
+  0% {
     opacity: 0;
   }
   100% {
-   opacity: 1;
+    opacity: 1;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .wallet_detail_icon{
+  .wallet_detail_icon {
     margin: 0 0.5rem;
     width: 2.2rem;
-  } 
-  
+  }
 }

@@ -4,11 +4,12 @@ import { svgObject } from "../../../svg";
 import { useSelector } from "react-redux";
 
 const WalletOverview = (props) => {
-const inComeDetails = useSelector(state => state.generalDashBoard.dashBoardDetails)
-console.log(inComeDetails)
+  const inComeDetails = useSelector(
+    (state) => state.generalDashBoard.dashBoardDetails
+  );
+  console.log(inComeDetails);
 
-  const imgLink =
-    "https://media.licdn.com/dms/image/D4D03AQGAnJ5L3FOTDA/profile-displayphoto-shrink_800_800/0/1691094321693?e=2147483647&v=beta&t=uutog5Z0cyq-Gk0af_n0fY8EBRxQjOAucHPmBo_Wx1Q";
+  const imgLink = inComeDetails.profilePic;
   return (
     <section className={styles.walletContainer}>
       <div className={styles.greetingContainer}>

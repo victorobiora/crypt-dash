@@ -23,13 +23,17 @@ const NightandDayComponent = () => {
     <section className={classes.containerI}>
       <section className={classes.containerII}>
         <div className={classes.day}>
-          {svgObject.sunlight(modeIsDay ? "#000000" : "#FFFFFF")}
+          {svgObject.sunlight(
+            modeIsDay ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.9)"
+          )}
         </div>
         <div className={modeSwitchClass} onClick={updateMode}>
           <div className={modeBallClass}></div>
         </div>
         <div className={classes.night}>
-          {svgObject.moon(modeIsDay ? "#000000" : "#FFFFFF")}
+          {svgObject.moon(
+            modeIsDay ? "rgba(0, 0, 0, 0.8)" : "rgba(255, 255, 255, 0.9)"
+          )}
         </div>
       </section>
     </section>

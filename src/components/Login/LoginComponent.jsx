@@ -15,15 +15,16 @@ const LoginComponent = (props) => {
     pickedCoins: [],
     monthlyIncome: 0,
     incomeTarget: 0,
-    expenseTarget: 0
+    expenseTarget: 0,
+    profilePic: null,
   });
 
   const increaseCaseNumber = (event) => {
     event.preventDefault();
-  
+
     if (isFormComplete) {
-      dispatch(dashActions.addToDashBoard(FormData))
-      navigate('/home')
+      dispatch(dashActions.addToDashBoard(FormData));
+      navigate("/home");
     }
 
     if (caseNumber === 0) {
@@ -51,14 +52,17 @@ const LoginComponent = (props) => {
         });
       }
     } else if (caseNumber === 3) {
-      if (FormData.monthlyIncome > FormData.incomeTarget || FormData.incomeTarget === undefined) {
+      if (
+        FormData.monthlyIncome > FormData.incomeTarget ||
+        FormData.incomeTarget === undefined
+      ) {
         return alert("Your income goal has to be higher than current income");
       } else {
         setCaseNumber((prevState) => {
           return prevState + 1;
         });
       }
-    }else if(caseNumber === 4){
+    } else if (caseNumber === 4) {
       if (FormData.expenseTarget <= 0) {
         return alert("Please enter how much you've spent this month");
       } else {
@@ -66,19 +70,24 @@ const LoginComponent = (props) => {
           return prevState + 1;
         });
       }
-    }else if(caseNumber === 5){
+    } else if (caseNumber === 5) {
       if (FormData.monthlyExpense <= 0) {
         return alert("Please enter an expense target");
       } else {
         setCaseNumber((prevState) => {
           return prevState + 1;
         });
-        setIsFormComplete(true);
       }
-    }
-
-    if (caseNumber < 5) {
-      setIsFormComplete(false);
+    } else if (caseNumber === 6) {
+      if (FormData.profilePic === null) {
+        return alert("Lol. You have to choose one");
+      } else {
+        setCaseNumber((prevState) => {
+          console.log(prevState + 1);
+          return prevState + 1;
+        });
+      }
+      setIsFormComplete(true);
     }
   };
 
@@ -94,54 +103,34 @@ const LoginComponent = (props) => {
   const returnFormHandler = (event) => {
     switch (caseNumber) {
       case 0:
-        return (
-          <QuestionsComponents.GetName
-            setFormData={setFormData}
-          />
-        );
+        return <QuestionsComponents.GetName setFormData={setFormData} />;
       case 1:
-        return (
-          <QuestionsComponents.GetFavCoins
-            setFormData={setFormData}
-          />
-        );
+        return <QuestionsComponents.GetFavCoins setFormData={setFormData} />;
 
       case 2:
-        return (
-          <QuestionsComponents.GetIncome
-            setFormData={setFormData}
-          />
-        );
+        return <QuestionsComponents.GetIncome setFormData={setFormData} />;
       case 3:
-        return (
-          <QuestionsComponents.GetIncomeGoals
-            setFormData={setFormData}
-          />
-        );
-        case 4: 
-        return (
-          <QuestionsComponents.GetExpense
-            setFormData={setFormData}
-          />
-        );
+        return <QuestionsComponents.GetIncomeGoals setFormData={setFormData} />;
+      case 4:
+        return <QuestionsComponents.GetExpense setFormData={setFormData} />;
       case 5:
         return (
-          <QuestionsComponents.GetExpenseGoals
-            setFormData={setFormData}
-          />
+          <QuestionsComponents.GetExpenseGoals setFormData={setFormData} />
         );
+      case 6:
+        return <QuestionsComponents.GetImage setFormData={setFormData} />;
       default:
         return;
     }
   };
-
 
   return (
     <section className={`${classes.logInContainer} new_Page`}>
       <div className={classes.introText}>
         <h1>Welcome to Crypt Dash</h1>
         <h4>
-          Before we head to the dashboard, Please answer some questions for us...
+          Before we head to the dashboard, Please answer some questions for
+          us...
         </h4>
       </div>
       <form>
