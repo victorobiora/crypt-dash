@@ -42,7 +42,7 @@
     padding: 0.25rem;
     padding-top: 0.4rem;
     border-color: transparent;
-    box-shadow: 0px 15px 15px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.5);
     display: flex;
 }
 
