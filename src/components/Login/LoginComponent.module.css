@@ -19,6 +19,7 @@ background: linear-gradient(to bottom,  rgb(208, 205, 205) 50%, rgb(8, 8, 173));
 
 .introText {
     margin-bottom: 2rem;
+    animation: clarity 1s;
 }
 
 .introText h1 {
@@ -38,8 +39,20 @@ background: linear-gradient(to bottom,  rgb(208, 205, 205) 50%, rgb(8, 8, 173));
 
 .logInContainer form {
     margin-top: 5rem;
+    animation: clarity 1s;
+ 
 }
 
 .logInContainer form h3 {
     margin: 0.5rem 0;
 }
+
+
+@keyframes clarity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
