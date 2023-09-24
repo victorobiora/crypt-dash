@@ -37,5 +37,5 @@ const LiveChartsComponent = (props) => {
     </section>
   );
 };
-//symbol, name, image, price
+
 export default LiveChartsComponent;

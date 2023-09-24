@@ -7,7 +7,6 @@ const WalletOverview = (props) => {
   const inComeDetails = useSelector(
     (state) => state.generalDashBoard.dashBoardDetails
   );
-  console.log(inComeDetails);
 
   const imgLink = inComeDetails.profilePic;
   return (
