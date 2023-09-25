@@ -1,6 +1,12 @@
 import classes from "./ChartsComponent.module.css";
 
-const ChartItem = ({item}) => {
+const ChartItem = ({item, color}) => {
+
+  const formatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+  const formattedNumber = formatter.format(item.market_cap);
+
+
+
   return (
     <ul className={classes.chartItemHeading2}>
       <li className={classes.chartNumber}>{item.market_cap_rank}</li>
@@ -16,9 +22,11 @@ const ChartItem = ({item}) => {
         </div>
       </li>
       <li className={classes.itemPrice}>$ {item.current_price}</li>
-      <li>{item.price_change_percentage_24h.toFixed(3)}%</li>
+      <li style={{
+        color: color
+      }}>{item.price_change_percentage_24h.toFixed(3)}%</li>
       <li className={classes.phoneScreenHide}>$ {item.ath}</li>
-      <li className={classes.phoneScreenHide}>${item.market_cap}</li>
+      <li className={classes.phoneScreenHide}>${formattedNumber}</li>
     </ul>
   );
 };
