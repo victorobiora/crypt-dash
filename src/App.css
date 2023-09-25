@@ -19,6 +19,7 @@
 
 .new_Page, .new_page_flex {
   overflow: auto;
+  height: 100%;
 
 }
 
