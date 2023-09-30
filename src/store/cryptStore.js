@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { configureStore } from "@reduxjs/toolkit";
 
 const pagination = (array) => {
+  // This is a function written to split an array of 100 items into 6
   const pageOne = array.slice(0, 20);
   const pageTwo = array.slice(20, 40);
   const pageThree = array.slice(40, 60);
