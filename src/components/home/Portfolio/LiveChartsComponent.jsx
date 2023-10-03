@@ -6,7 +6,7 @@ import LineChart from "../../charts/LineChart";
 const LiveChartsComponent = (props) => {
   const liveCoinsArray = useSelector(state => state.generalDashBoard.liveChartCoins);
   
-  const displayedLiveCoins = liveCoinsArray.slice(0, 3);
+  const displayedLiveCoins = liveCoinsArray.slice(0, 4);
   console.log(displayedLiveCoins)
 
   return (
