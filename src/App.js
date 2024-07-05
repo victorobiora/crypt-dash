@@ -6,7 +6,6 @@ import RootLayout from "./pages/RootLayOut";
 import LogInPage from "./pages/logInPage";
 import { Provider } from "react-redux";
 import store from "./store/cryptStore";
-import Input from "./pages/Input";
 
 import "./App.css";
 

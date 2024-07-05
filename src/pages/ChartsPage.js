@@ -10,10 +10,15 @@ const ChartsPage = () => {
   const selectedPage = useSelector(
     (state) => state.chartState.selectedPageData
   );
+  const genCharts = useSelector(
+    (state) => state.chartState.genCharts
+  );
   const dispatch = useDispatch();
   const data = useLoaderData();
   const [showChart, setShowChart] = useState(true);
   const navigate = useNavigate();
+
+  console.log(genCharts)
 
   useEffect(() => {
     if (data.errorMessage) {
@@ -37,7 +42,7 @@ export default ChartsPage;
 export const ChartsLoader = async () => {
   try {
     const chartsDataCall = await fetch(
-      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en",
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en&x_cg_demo_api_key=${process.env.REACT_APP_API_KEY}`,
       {
         headers: {
           "Content-Type": "application/json",

@@ -12,6 +12,7 @@ const pagination = (array) => {
   return [pageOne, pageTwo, pageThree, pageFour, pageFive];
 };
 
+
 const chartsInitialState = {
   genCharts: [],
   selectedPageData: [],
