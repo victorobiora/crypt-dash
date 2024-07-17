@@ -20,7 +20,7 @@ const favCoins =  useSelector(
 
   useEffect(() => {
     const getCoinsData = async () => {
-      const pickedCoinsArray = ["bitcoin", "ethereum"];
+      const pickedCoinsArray = formData.pickedCoins;
 
       //Here, i get the data for picked coins including symbol name and chart data
       //i then push it to my store to be used by chart.js
